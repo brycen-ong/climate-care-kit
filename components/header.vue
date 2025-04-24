@@ -1,3 +1,9 @@
 <template>
-  <div>Header :)</div>
+  <div>
+
+  </div>
 </template>
+
+<style lang="scss">
+
+</style>
