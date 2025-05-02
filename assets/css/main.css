@@ -3,4 +3,28 @@
 @theme {
   --font-sans: 'Raleway', 'sans-serif';
   --color-primary: #5AAAF1;
+  /*Title*/
+  --text-title: 88px;
+  --text-title--line-height: 100%;
+  --text-title--font-weight: 500;
+  /*Body*/
+  --text-body: 18px;
+  --text-body--line-height: 31px;
+  --text-body--font-weight: 400;
+  /*H1*/
+  --text-h1: 54px;
+  --text-h1--line-height: 73px;
+  --text-h1--font-weight: 500;
+  /*H2*/
+  --text-h2: 32px;
+  --text-h2--line-height: 48px;
+  --text-h2--font-weight: 700;
+  /*Label*/
+  --text-label: 14px;
+  --text-label--line-height: 21px;
+  --text-label--font-weight: 400;
+  /*Button*/
+  --text-button: 18px;
+  --text-button--line-height: 31px;
+  --text-button--font-weight: 700;
 }
