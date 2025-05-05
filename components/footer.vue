@@ -21,7 +21,7 @@
           </li>
         </ul>
       </div>
-        <img class="h-[162px]" src="/assets/svg/logo-white.svg">
+        <img class="h-[162px]" src="/assets/images/logo-white.png">      
     </div>
     <div class="ms-auto mt-4 font-medium text-white">Copyright © 2024 Climate Care Kit. Climate Care Kit does not provide professional medical advice.</div>
   </footer>

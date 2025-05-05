@@ -1,17 +1,21 @@
 <template>
-  <section class="flex flex-col items-center text-center px-37">
+  <section class="section relative text-center bg-[url(/assets/images/home-bg-1.png)] bg-size-[100%_100%] text-white">
     <div class="text-title mb-16">How does Climate Change affect my health?</div>
     <div class="text-h2">Climate change is a global health issue...</div>
     <div class="text-body">but how does it really affect me? What are the dangers I am facing today, and how can I prepare for it now?</div>
-    <div class="text-button mt-19">Scroll Down</div>
-    <div class="mb-17">Chevron Down</div>
+    <div class="flex flex-col justify-center items-center absolute bottom-19">
+      <div class="text-button mb-4">Scroll Down</div>
+      <button class="button button-circle h-16 w-16">
+        <SvgLoader :icon="'chevron-y'" class="w-5 h-5"></SvgLoader>
+      </button>
+    </div>
   </section>
-  <section class="w-full flex flex-col items-center px-37">
+  <section class="section relative bg-[url(/assets/images/home-bg-2.png)] bg-size-[100%_100%]">
     <div class="flex justify-between gap-20">
       <div class="w-full">
         <div class="text-h1">Temperatures in the Philippines have become dangerous</div>
         <div class="text-body">Climate change is making extreme temperatures more frequent, and Metro Manila may one day become a hotspot for deadly heat. 
-          While hot waether may seem normal in a tropical country, spending too much time in the heat, doing strenuous activities in hot places, 
+          While hot weather may seem normal in a tropical country, spending too much time in the heat, doing strenuous activities in hot places, 
           and not drinking enough water can lead to ilnesses like <span class="font-bold">heat stroke</span></div>
       </div>
       <div class="w-full">
@@ -20,9 +24,11 @@
         <div class="text-label">as of May 2021, Philstar</div>
       </div>
     </div>
-    <div class="mb-17">Chevron Down</div>
+    <button class="button button-circle absolute bottom-19 h-16 w-16 bg-white border-2 border-secondary">
+      <SvgLoader :icon="'chevron-y'" class="w-5 h-5 text-secondary"></SvgLoader>
+    </button>
   </section>
-  <section class="w-full px-37">
+  <section class="section relative bg-[url(/assets/images/home-bg-3.png)] bg-size-[100%_100%]">
     <div class="flex justify-between gap-20">
       <div class="w-full">
         <div class="text-h1">Contaminated water is a host for disease</div>
@@ -37,9 +43,11 @@
         <div class="text-label">as of December 2023, World Health Organization</div>
       </div>
     </div>
-    <div class="mb-17">Chevron Down</div>
+    <button class="button button-circle absolute bottom-19 h-16 w-16 bg-white border-2 border-secondary">
+      <SvgLoader :icon="'chevron-y'" class="w-5 h-5 text-secondary"></SvgLoader>
+    </button>
   </section>
-  <section class="w-full px-37">
+  <section class="section relative bg-[url(/assets/images/home-bg-4.png)] bg-size-[100%_100%]">
     <div class="flex justify-between gap-20">
       <div class="w-full">
         <div class="text-h1">Air pollution can cause heart and lung problems</div>
@@ -53,24 +61,37 @@
         <div class="text-label">World Health Organization</div>
       </div>
     </div>
-    <div class="mb-17">Chevron Down</div>
+    <div class="flex flex-col justify-center items-center absolute bottom-19 text-white">
+      <div class="text-button mb-4">What Now?</div>
+      <button class="button button-circle h-16 w-16">
+        <SvgLoader :icon="'chevron-y'" class="w-5 h-5"></SvgLoader>
+      </button>
+    </div>
   </section>
-  <section class="flex flex-col items-center px-37">
-    <div class="text-title">What can I do now?</div>
+  <section class="section text-white bg-[url(/assets/images/home-bg-5.png)] bg-size-[100%_100%]">
+    <div class="text-title mb-16">What can I do now?</div>
     <div class="flex justify-between gap-4">
-      <div class="w-full">
-        <div class="text-h2">Build your Climate Care Kit</div>
-        <div class="text-body">Preparedness starts with you. One step you can take to protect your health is by including
+      <div class="flex flex-col items-center justify-center w-full p-8 bg-[#00A89B]/80 text-center rounded-2xl">
+        <div class="text-h2 mb-4">Build your Climate Care Kit</div>
+        <div class="text-body mb-8">Preparedness starts with you. One step you can take to protect your health is by including
           climate-ready items in your personal health kit. Take the first step by learning how to build your own climate care kit with us.
         </div>
-        <button class="text-button">Build my Kit</button>
+        <NuxtLink :to="'/kit-builder'">
+          <button class="button text-button w-70">
+            Build my Kit
+          </button>
+        </NuxtLink>
       </div>
-      <div class="w-full">
-        <div class=text-h2>Find your Climate Personality</div>
-        <div class="text-body">Your lifestyle, daily routines, and beliefs all play a role in your risk for the effects of climate change. 
+      <div class="flex flex-col items-center justify-center w-full p-8 bg-[#FF7255]/80 text-center rounded-2xl">
+        <div class="text-h2 mb-4">Find your Climate Personality</div>
+        <div class="text-body mb-8">Your lifestyle, daily routines, and beliefs all play a role in your risk for the effects of climate change. 
           Take our quiz to discover your unique climate personality and what it means for your health.
         </div>
-        <button class="text-button">Take the Quiz</button>
+        <NuxtLink :to="'/climate-personality'">
+          <button class="button text-button w-70">
+            Take the Quiz
+          </button>
+        </NuxtLink>
       </div>
     </div>
   </section>

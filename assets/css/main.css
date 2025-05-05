@@ -3,6 +3,7 @@
 @theme {
   --font-sans: 'Raleway', 'sans-serif';
   --color-primary: #5AAAF1;
+  --color-secondary: #FFAA6B;
   /*Title*/
   --text-title: 88px;
   --text-title--line-height: 100%;
@@ -27,4 +28,51 @@
   --text-button: 18px;
   --text-button--line-height: 31px;
   --text-button--font-weight: 700;
+  /*Background Size Full*/
+  --bg-size-full: 100% 100%;
+}
+
+@layer components {
+  .button {
+    border-radius: 16px;
+    background-color: #FFAA6B;
+    padding: 16px 32px;
+    cursor: pointer;
+    transition-property: all;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .button * {
+    transition-property: all;
+    transition-timing-function: var(--tw-ease, var(--default-transition-timing-function));
+    transition-duration: var(--tw-duration, var(--default-transition-duration));
+  }
+
+  .button:hover {
+    transform: scale(1.05);
+  }
+
+  .button:hover * {
+    transform: translate(0, 2px);
+  }
+
+  .button.button-circle {
+    border-radius: 100%;
+    background-color: #FFAA6B;
+    padding: 10px;
+  }
+
+  .section {
+    width: 100%;
+    height: 100vh;
+    padding: 0px 148px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 }
