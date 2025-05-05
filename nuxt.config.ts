@@ -10,7 +10,10 @@ export default defineNuxtConfig({
       tailwindcss(),
     ]
   },
-  modules: ['@vueuse/nuxt'],
+  svgo: {
+    defaultImport: 'component',
+  },
+  modules: ['@vueuse/nuxt', 'nuxt-svgo'],
   app: {
     head: {
       htmlAttrs: {
