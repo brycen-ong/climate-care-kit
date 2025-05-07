@@ -13,7 +13,13 @@ export default defineNuxtConfig({
   svgo: {
     defaultImport: 'component',
   },
-  modules: ['@vueuse/nuxt', 'nuxt-svgo'],
+  snackbar: {
+    bottom: true,
+    duration: 5000,
+    success: '#00A89B',
+    error: '#FF7255',
+  },
+  modules: ['@vueuse/nuxt', 'nuxt-svgo', 'nuxt-snackbar'],
   app: {
     head: {
       htmlAttrs: {

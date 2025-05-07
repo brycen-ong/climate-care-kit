@@ -4,4 +4,5 @@
     <slot />
   </main>
   <Footer />
+  <NuxtSnackbar />
 </template>
