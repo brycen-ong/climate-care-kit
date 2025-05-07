@@ -6,7 +6,7 @@
     <div class="flex flex-col justify-center items-center absolute bottom-19">
       <div class="text-button mb-4">Scroll Down</div>
       <button class="button button-circle h-16 w-16">
-        <SvgLoader :icon="'chevron-y'" class="w-5 h-5"></SvgLoader>
+        <SvgLoader :icon="'chevron-y'" class="w-5 h-5 animate"></SvgLoader>
       </button>
     </div>
   </section>
@@ -25,7 +25,7 @@
       </div>
     </div>
     <button class="button button-circle absolute bottom-19 h-16 w-16 bg-white border-2 border-secondary">
-      <SvgLoader :icon="'chevron-y'" class="w-5 h-5 text-secondary"></SvgLoader>
+      <SvgLoader :icon="'chevron-y'" class="w-5 h-5 text-secondary animate"></SvgLoader>
     </button>
   </section>
   <section class="section relative bg-[url(/assets/images/home-bg-3.png)] bg-size-[100%_100%]">
@@ -44,7 +44,7 @@
       </div>
     </div>
     <button class="button button-circle absolute bottom-19 h-16 w-16 bg-white border-2 border-secondary">
-      <SvgLoader :icon="'chevron-y'" class="w-5 h-5 text-secondary"></SvgLoader>
+      <SvgLoader :icon="'chevron-y'" class="w-5 h-5 text-secondary animate"></SvgLoader>
     </button>
   </section>
   <section class="section relative bg-[url(/assets/images/home-bg-4.png)] bg-size-[100%_100%]">
@@ -64,7 +64,7 @@
     <div class="flex flex-col justify-center items-center absolute bottom-19 text-white">
       <div class="text-button mb-4">What Now?</div>
       <button class="button button-circle h-16 w-16">
-        <SvgLoader :icon="'chevron-y'" class="w-5 h-5"></SvgLoader>
+        <SvgLoader :icon="'chevron-y'" class="w-5 h-5 animate"></SvgLoader>
       </button>
     </div>
   </section>

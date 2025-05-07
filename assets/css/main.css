@@ -12,6 +12,10 @@
   --text-body: 18px;
   --text-body--line-height: 31px;
   --text-body--font-weight: 400;
+  /*Body2*/
+  --text-body2: 20px;
+  --text-body2--line-height: 31px;
+  --text-body2--font-weight: 400;
   /*H1*/
   --text-h1: 54px;
   --text-h1--line-height: 73px;
@@ -20,6 +24,10 @@
   --text-h2: 32px;
   --text-h2--line-height: 48px;
   --text-h2--font-weight: 700;
+  /*H3*/
+  --text-h3: 20px;
+  --text-h3--line-height: 31px;
+  --text-h3--font-weight: 700;
   /*Label*/
   --text-label: 14px;
   --text-label--line-height: 21px;
@@ -30,6 +38,12 @@
   --text-button--font-weight: 700;
   /*Background Size Full*/
   --bg-size-full: 100% 100%;
+}
+
+@layer theme {
+  .vue3-snackbar-message {
+    border-radius: 16px !important;
+  }
 }
 
 @layer components {
@@ -44,20 +58,21 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    height: 64px;
   }
 
-  .button * {
+  .button .animate {
     transition-property: all;
     transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
     transition-duration: 300ms;
   }
 
   .button:hover {
-    transform: scale(1.1);
+    transform: scale(1.05);
   }
 
-  .button:hover * {
-    transform: translate(0, 2px);
+  .button:hover .animate {
+    transform: translate(0, 4px);
   }
 
   .button.button-circle {

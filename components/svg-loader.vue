@@ -1,7 +1,3 @@
-<template>
-  <component :is="icon"></component>
-</template>
-
 <script setup lang="ts">
   import IconChevronX from '~/assets/icons/chevron-x.svg';
   import IconChevronY from '~/assets/icons/chevron-y.svg';
@@ -20,3 +16,7 @@
   })
 
 </script>
+
+<template>
+  <component :is="icon"></component>
+</template>
