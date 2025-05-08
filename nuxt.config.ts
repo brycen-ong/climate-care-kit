@@ -23,7 +23,8 @@ export default defineNuxtConfig({
   app: {
     head: {
       htmlAttrs: {
-        lang: 'en'
+        lang: 'en',
+        class: 'scroll-smooth'
       },
       link: [
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },

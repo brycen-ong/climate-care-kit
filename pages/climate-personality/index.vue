@@ -162,34 +162,38 @@
 </script>
 
 <template>
-  <section class="section bg-[url(/assets/images/cpq-bg-1.png)] bg-size-[100%_100%] transition-all" :class="{ 'hidden': step > 0 }">
-    <div class="text-title mb-6">Discover your Climate Personality</div>
-    <div class="text-body mb-16">
-      How do you react to the world around you, and what role does this play in your health?
-      Discover your Climate Personality and learn about how to protect your health from the changing climate.
+  <section class="section bg-[url(/assets/images/cpq-bg-1.png)] bg-size-[100%_100%] text-center" :class="{ 'hidden': step > 0 }">
+    <div class="container">
+      <div class="text-title mb-6">Discover your Climate Personality</div>
+      <div class="text-body mb-16 max-w-214">
+        How do you react to the world around you, and what role does this play in your health?
+        Discover your Climate Personality and learn about how to protect your health from the changing climate.
+      </div>
+      <button class="button text-button w-70 text-white" @click="step++">Start</button>
     </div>
-    <button class="button text-button w-70 text-white" @click="step++">Start</button>
   </section>
   <section class="section bg-size-[100%_100%] transition-all" :class="[{ 'hidden': step === 0 }, quiz[step-1]?.background]">
-    <div class="text-label mb-6">Question {{ step }}/9</div>
-    <div class="text-h3 mb-16">{{ quiz[step-1]?.question }}</div>
-    <div class="text-body2 grid grid-cols-2 gap-2 mb-16">
-      <div class="col-span-1" v-for="option in Object.keys(quiz[step-1]?.options || {})">
-        <input type="radio" :id="`${step}-${option}`" :value="option" :name="`${step}`" class="absolute opacity-0 peer" v-model="answers[step-1]">
-        <label :for="`${step}-${option}`" class="block p-6 rounded-2xl cursor-pointer hover:bg-[#FFF3] peer-checked:ring-1 ring-white/75 peer-checked:bg-[#FFF3]">
-          {{ quiz[step-1]?.options?.[option as keyof object] }}
-        </label>
+    <div class="container">
+      <div class="text-label mb-6">Question {{ step }}/9</div>
+      <div class="text-h3 mb-16">{{ quiz[step-1]?.question }}</div>
+      <div class="text-body2 grid grid-cols-2 gap-2 mb-16">
+        <div class="col-span-1" v-for="option in Object.keys(quiz[step-1]?.options || {})">
+          <input type="radio" :id="`${step}-${option}`" :value="option" :name="`${step}`" class="absolute opacity-0 peer" v-model="answers[step-1]">
+          <label :for="`${step}-${option}`" class="block p-6 rounded-2xl cursor-pointer hover:bg-[#FFF3] peer-checked:ring-1 ring-white/75 peer-checked:bg-[#FFF3]">
+            {{ quiz[step-1]?.options?.[option as keyof object] }}
+          </label>
+        </div>
       </div>
-    </div>
-    <div class="flex text-button text-white gap-2">
-      <button class="button w-34" @click="back()">
-        <SvgLoader :icon="'chevron-x'" class="h-4 w-4 me-2 rotate-180"></SvgLoader>
-        Back
-      </button>
-      <button class="button w-34" @click="next()">
-        {{ step < 9 ? 'Next' : 'Finish' }}
-        <SvgLoader :icon="'chevron-x'" class="h-4 w-4 ms-2"></SvgLoader>
-      </button>
+      <div class="flex text-button text-white gap-2">
+        <button class="button w-34" @click="back">
+          <SvgLoader :icon="'chevron-x'" class="h-4 w-4 me-2 rotate-180"></SvgLoader>
+          Back
+        </button>
+        <button class="button w-34" @click="next">
+          {{ step < 9 ? 'Next' : 'Finish' }}
+          <SvgLoader :icon="'chevron-x'" class="h-4 w-4 ms-2"></SvgLoader>
+        </button>
+      </div>
     </div>
   </section>
 </template>
