@@ -1,5 +1,5 @@
 <template>
-  <section class="section relative bg-[url(/assets/images/home-bg-1.png)] bg-size-[100%_100%] text-center text-white">
+  <section class="section relative bg-[url(/assets/images/home/home-bg-1.png)] bg-size-[100%_100%] text-center text-white">
     <div class="container">
       <div class="text-title mb-16">How does Climate Change affect my health?</div>
       <div class="text-h2 max-w-214">Climate change is a global health issue...</div>
@@ -14,7 +14,7 @@
       </div>
     </div>
   </section>
-  <section class="section relative bg-[url(/assets/images/home-bg-2.png)] bg-size-[100%_100%]" id="heat">
+  <section class="section relative bg-[url(/assets/images/home/home-bg-2.png)] bg-size-[100%_100%]" id="heat">
     <div class="container">
       <div class="flex justify-between gap-20">
         <div class="w-full flex flex-col item-center justify-center">
@@ -29,14 +29,16 @@
           <div class="text-label">as of May 2021, Philstar</div>
         </div>
       </div>
-      <NuxtLink :to="{ hash: '#rain' }">
-        <button class="button button-circle absolute bottom-19 h-16 w-16 bg-white border-2 border-secondary">
-          <SvgLoader :icon="'chevron-y'" class="w-5 h-5 text-secondary animate"></SvgLoader>
-        </button>
-      </NuxtLink>
+      <div class="flex flex-col justify-center items-center absolute bottom-19">
+        <NuxtLink :to="{ hash: '#rain' }">
+          <button class="button button-circle h-16 w-16 bg-white border-2 border-secondary">
+            <SvgLoader :icon="'chevron-y'" class="w-5 h-5 text-secondary animate"></SvgLoader>
+          </button>
+        </NuxtLink>
+      </div>
     </div>
   </section>
-  <section class="section relative bg-[url(/assets/images/home-bg-3.png)] bg-size-[100%_100%]" id="rain">
+  <section class="section relative bg-[url(/assets/images/home/home-bg-3.png)] bg-size-[100%_100%]" id="rain">
     <div class="container">
       <div class="flex justify-between gap-20">
         <div class="w-full flex flex-col item-center justify-center">
@@ -52,14 +54,16 @@
           <div class="text-label">as of December 2023, World Health Organization</div>
         </div>
       </div>
-      <NuxtLink :to="{ hash: '#pollution' }">
-        <button class="button button-circle absolute bottom-19 h-16 w-16 bg-white border-2 border-secondary">
-          <SvgLoader :icon="'chevron-y'" class="w-5 h-5 text-secondary animate"></SvgLoader>
-        </button>
-      </NuxtLink>
+      <div class="flex flex-col justify-center items-center absolute bottom-19">
+        <NuxtLink :to="{ hash: '#pollution' }">
+          <button class="button button-circle h-16 w-16 bg-white border-2 border-secondary">
+            <SvgLoader :icon="'chevron-y'" class="w-5 h-5 text-secondary animate"></SvgLoader>
+          </button>
+        </NuxtLink>
+      </div>
     </div>
   </section>
-  <section class="section relative bg-[url(/assets/images/home-bg-4.png)] bg-size-[100%_100%]" id="pollution">
+  <section class="section relative bg-[url(/assets/images/home/home-bg-4.png)] bg-size-[100%_100%]" id="pollution">
     <div class="container">
       <div class="flex justify-between gap-20">
         <div class="w-full flex flex-col item-center justify-center">
@@ -84,7 +88,7 @@
       </div>
     </div>
   </section>
-  <section class="section text-white bg-[url(/assets/images/home-bg-5.png)] bg-size-[100%_100%]" id="steps">
+  <section class="section text-white bg-[url(/assets/images/home/home-bg-5.png)] bg-size-[100%_100%]" id="steps">
     <div class="container">
       <div class="text-title mb-16">What can I do now?</div>
       <div class="flex justify-between gap-4">

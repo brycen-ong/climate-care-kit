@@ -25,7 +25,7 @@ onClickOutside(dropdownMenu, closeDropdown);
   <header class="flex px-16 w-full -mt-20 h-20 justify-center bg-white/10 sticky top-0 z-10">
     <div class="flex w-full max-w-360 justify-between items-center">
       <NuxtLink :to="'/'">
-        <img src="/assets/images/logo.png" class="h-20 w-20">
+        <img src="/assets/images/logos/logo.png" class="h-20 w-20">
       </NuxtLink>
       <nav>
         <ul class="flex text-xl font-bold">
