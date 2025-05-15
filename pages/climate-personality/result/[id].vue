@@ -167,7 +167,7 @@
             <li class="mb-4">Dress loosely, lightly, and stay hydrated.</li>
           </ul>
         </div>
-        <img class="h-139 w-139" src="/assets/images/cpq-result/cpq-result-extreme-heat-image.png">
+        <img class="h-139 w-139" src="/assets/images/cpq-result/cpq-result-extreme-heat.png">
       </div>
       <div class="flex gap-8 mb-64">
         <div>
@@ -182,7 +182,7 @@
             <li class="mb-4">Use mosquito repellant if your home is in an area with stagnant water</li>
           </ul>
         </div>
-        <img class="h-139 w-139" src="/assets/images/cpq-result/cpq-result-rain-and-flooding-image.png">
+        <img class="h-139 w-139" src="/assets/images/cpq-result/cpq-result-rain-and-flooding.png">
       </div>
       <div class="flex gap-8 mb-32">
         <div>
@@ -197,7 +197,7 @@
             <li class="mb-4">If you have to go outdoors when the air quality is bad, wear a high-filtration mask like an N95 or KN95.</li>
           </ul>
         </div>
-        <img class="h-139 w-139" src="/assets/images/cpq-result/cpq-result-air-pollution-mage.png">
+        <img class="h-139 w-139" src="/assets/images/cpq-result/cpq-result-air-pollution.png">
       </div>
     </div>
   </section>
