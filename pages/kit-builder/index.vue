@@ -141,6 +141,26 @@
       return;
     }
 
+    if (step.value === 1) {
+      if (!answers.value[step.value-1 as keyof object]) {
+        snackbar.add({
+          type: 'error',
+          text: 'Please select an answer!',
+          duration: 5000,
+        });
+        return;
+      }
+    } else if (step.value === 2) {
+      if (!Object.values(answers.value[step.value-1 as keyof object]).includes(true)) {
+        snackbar.add({
+          type: 'error',
+          text: 'Please select atleast one answer',
+          duration: 5000,
+        });
+        return;
+      }
+    }
+
     step.value++;
   };
 
@@ -190,12 +210,14 @@
         My health kit has items to address
         {{ climateChangeResults }}
       </div>
-      <div class="text-h3 mb-2">A versatile kit</div>
-      <div class="text-body mb-8">
-        My health kit has
-        {{ miscellaneousResults }}
-        items
-      </div>
+      <template v-if="Object.values(answers[2]).includes(true)">
+        <div class="text-h3 mb-2">A versatile kit</div>
+        <div class="text-body mb-8">
+          My health kit has
+          {{ miscellaneousResults }}
+          items
+        </div>
+      </template>
     </div>
     <div class="flex text-button text-white gap-2">
       <button class="button w-34" @click="back">
