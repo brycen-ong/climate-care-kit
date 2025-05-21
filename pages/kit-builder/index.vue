@@ -87,6 +87,46 @@
     }
   });
 
+  const climateChangeResults = computed(() => {
+    const results = [];
+    if (answers.value[1]['extreme-heat']) {
+      results.push('extreme heat');
+    }
+
+    if (answers.value[1]['rain-and-flooding']) {
+      results.push('rain and flooding');
+    }
+
+    if (answers.value[1]['air-pollution']) {
+      results.push('air pollution');
+    }
+
+    if (results.length === 2) {
+      return results.join(' and ');
+    } else if (results.length === 3) {
+      return `${results[0]}, ${results[1]}, and ${results[2]}`;
+    } else {
+      return results[0]
+    }
+  });
+
+  const miscellaneousResults = computed(() => {
+    const results = [];
+    if (answers.value[2]['hygiene']) {
+      results.push('hygiene');
+    }
+
+    if (answers.value[2]['first-aid']) {
+      results.push('first-aid');
+    }
+
+    if (results.length === 2) {
+      return results.join(' and ');
+    } else {
+      return results[0];
+    }
+  })
+
   function back() {
     if (step.value === 0) {
       return;
@@ -148,20 +188,12 @@
       <div class="text-h3 mb-2">A kit ready for climate change</div>
       <div class="text-body mb-8">
         My health kit has items to address
-        <template v-if="answers[1]['extreme-heat']"> extreme heat</template>
-        <template v-if="answers[1]['extreme-heat']&&(answers[1]['rain-and-flooding'] || answers[1]['air-pollution'])&&(!answers[1]['rain-and-flooding'] || !answers[1]['air-pollution'])"> and</template>
-        <template v-if="answers[1]['extreme-heat']&&answers[1]['rain-and-flooding']&&answers[1]['air-pollution']">,</template>
-        <template v-if="answers[1]['rain-and-flooding']"> rain and flooding</template>
-        <template v-if="answers[1]['extreme-heat']&&answers[1]['rain-and-flooding']&&answers[1]['air-pollution']">,</template>
-        <template v-if="answers[1]['rain-and-flooding']&&answers[1]['air-pollution']"> and</template>
-        <template v-if="answers[1]['air-pollution']"> air pollution</template>
+        {{ climateChangeResults }}
       </div>
       <div class="text-h3 mb-2">A versatile kit</div>
       <div class="text-body mb-8">
         My health kit has
-        <template v-if="answers[2]['hygiene']">hygiene </template>
-        <template v-if="answers[2]['hygiene'] && answers[2]['first-aid']">and </template>
-        <template v-if="answers[2]['first-aid']">first aid </template>
+        {{ miscellaneousResults }}
         items
       </div>
     </div>
