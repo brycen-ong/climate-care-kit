@@ -1,3 +1,4 @@
+
 <script setup lang="ts">
   const step = ref(0);
   const snackbar = useSnackbar();
@@ -7,6 +8,7 @@
       question: 'Kit Size',
       title: 'Who am I building this kit for?',
       subtitle: '',
+      type: 'radio',
       options: {
         small: {
           title: 'Me',
@@ -29,6 +31,7 @@
       question: 'Climate Change',
       title: 'Which of these health risks do I experience?',
       subtitle: 'Select all that apply',
+      type: 'checkbox',
       options: {
         'extreme-heat': {
           title: 'Extreme heat',
@@ -51,6 +54,7 @@
       question: 'Miscellaneous',
       title: 'What else do I want to use this kit for?',
       subtitle: 'Select all that apply or simply click "Next"',
+      type: 'checkbox',
       options: {
         hygiene: {
           title: 'Hygiene',
@@ -63,9 +67,25 @@
           background: 'bg-[#FFA691]',
         },
       }
+    },
+    {
+      title: 'You\'re done!',
+      subtitle: 'Now that you\'re done customizing your kit, the next step is to acquire the items you need to build it in person.',
     }
   ];
-  const answers = ref([]);
+
+  const answers = ref({
+    0: '',
+    1: {
+      'extreme-heat': false,
+      'rain-and-flooding': false,
+      'air-pollution': false,
+    },
+    2: {
+      hygiene: false,
+      'first-aid': false,
+    }
+  });
 
   function back() {
     if (step.value === 0) {
@@ -76,7 +96,7 @@
   };
 
   function next() {
-    if (step.value >= 5) {
+    if (step.value === 4) {
       finish();
       return;
     }
@@ -84,7 +104,9 @@
     step.value++;
   };
 
-  function finish() {};
+  function finish() {
+    console.log(answers.value);
+  };
 </script>
 
 <template>
@@ -100,13 +122,47 @@
     <div class="text-label mb-6 uppercase">{{ kitBuilder[step-1]?.question }}</div>
     <div class="text-h2" :class="{'mb-2': step > 1, 'mb-16': step <=1}">{{ kitBuilder[step-1]?.title }}</div>
     <div class="text-body mb-6">{{ kitBuilder[step-1]?.subtitle }}</div>
-    <div class="flex items-center justify-center gap-20 text-white text-center mb-16">
-      <div v-for="option in Object.keys(kitBuilder[step-1]?.options || {})">
-        <input type="radio" :id="option" :value="option" :name="`${step-1}`" class="absolute opacity-0 peer" v-model="answers[step-1]">
-        <label :for="`${option}`" class="rounded-2xl flex flex-col items-center justify-center w-69 h-94 px-8 peer-checked:border-6 peer-checked:shadow-2xl" :class="kitBuilder[step-1].options?.[option as keyof object]['background']">
-          <div class="text-h2 mb-2">{{ kitBuilder[step-1].options?.[option as keyof object]['title'] }}</div>
-          <div class="text-body">{{ kitBuilder[step-1].options?.[option as keyof object]['subtitle'] }}</div>
-        </label>
+    <div class="flex items-center justify-center gap-20 text-white text-center mb-16" v-if="step < 4">
+      <template v-if="kitBuilder[step-1]?.type === 'radio'">
+        <div v-for="option in Object.keys(kitBuilder[step-1]?.options || {})">
+          <input type="radio" :id="option" :value="option" :name="`${step-1}`" class="absolute opacity-0 peer" v-model="answers[step-1 as keyof object]">
+          <label :for="`${option}`" class="rounded-2xl flex flex-col items-center justify-center w-69 h-94 px-[22px] border-10 border-transparent peer-checked:border-white peer-checked:shadow-2xl/25" :class="kitBuilder[step-1].options?.[option as keyof object]['background']">
+            <div class="text-h2 mb-2">{{ kitBuilder[step-1].options?.[option as keyof object]['title'] }}</div>
+            <div class="text-body">{{ kitBuilder[step-1].options?.[option as keyof object]['subtitle'] }}</div>
+          </label>
+        </div>
+      </template>
+      <template v-if="kitBuilder[step-1]?.type === 'checkbox'">
+        <div v-for="option in Object.keys(kitBuilder[step-1]?.options || {})">
+          <input type="checkbox" :id="option" :value="option" class="absolute opacity-0 peer" v-model="answers[step-1 as keyof object][option]">
+          <label :for="`${option}`" class="rounded-2xl flex flex-col items-center justify-center w-69 h-94 px-[22px] border-10 border-transparent peer-checked:border-white peer-checked:shadow-2xl/25" :class="kitBuilder[step-1].options?.[option as keyof object]['background']">
+            <div class="text-h2 mb-2">{{ kitBuilder[step-1].options?.[option as keyof object]['title'] }}</div>
+            <div class="text-body">{{ kitBuilder[step-1].options?.[option as keyof object]['subtitle'] }}</div>
+          </label>
+        </div>
+      </template>
+    </div>
+    <div class="flex flex-col items-center justify-center" v-if="step === 4">
+      <div class="text-h3 mb-2">A {{ answers[0 as keyof object] }} kit</div>
+      <div class="text-body mb-8">My health kit is good enough for {{ answers[0] === 'small' ? 'me!' : answers[0] === 'medium' ? 'me and a friend!' : 'my family!' }}</div>
+      <div class="text-h3 mb-2">A kit ready for climate change</div>
+      <div class="text-body mb-8">
+        My health kit has items to address
+        <template v-if="answers[1]['extreme-heat']"> extreme heat</template>
+        <template v-if="answers[1]['extreme-heat']&&(answers[1]['rain-and-flooding'] || answers[1]['air-pollution'])&&(!answers[1]['rain-and-flooding'] || !answers[1]['air-pollution'])"> and</template>
+        <template v-if="answers[1]['extreme-heat']&&answers[1]['rain-and-flooding']&&answers[1]['air-pollution']">,</template>
+        <template v-if="answers[1]['rain-and-flooding']"> rain and flooding</template>
+        <template v-if="answers[1]['extreme-heat']&&answers[1]['rain-and-flooding']&&answers[1]['air-pollution']">,</template>
+        <template v-if="answers[1]['rain-and-flooding']&&answers[1]['air-pollution']"> and</template>
+        <template v-if="answers[1]['air-pollution']"> air pollution</template>
+      </div>
+      <div class="text-h3 mb-2">A versatile kit</div>
+      <div class="text-body mb-8">
+        My health kit has
+        <template v-if="answers[2]['hygiene']">hygiene </template>
+        <template v-if="answers[2]['hygiene'] && answers[2]['first-aid']">and </template>
+        <template v-if="answers[2]['first-aid']">first aid </template>
+        items
       </div>
     </div>
     <div class="flex text-button text-white gap-2">
@@ -115,7 +171,7 @@
         Back
       </button>
       <button class="button w-34" @click="next">
-        {{ step < 9 ? 'Next' : 'Finish' }}
+        {{ step < 4 ? 'Next' : 'Finish' }}
         <SvgLoader :icon="'chevron-x'" class="h-4 w-4 ms-2"></SvgLoader>
       </button>
     </div>
