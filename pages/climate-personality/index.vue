@@ -11,17 +11,17 @@
         c: 'Busy. I spend about of half my time on my feet, but I can usually find a cool and comfy place to wind down later.',
         d: 'My days can be busy, but I am usually spending it relaxing at home or somewhere nice!',
       },
-      background: 'bg-[url(/assets/images/cpq/cpq-bg-2.png)]',
+      background: 'bg-[url(/assets/images/cpq/cpq-bg-2.webp)]',
     },
     {
-      question: 'You gaze our your bedroom window. What do you expect to see?',
+      question: 'You gaze out your bedroom window. What do you expect to see?',
       options: {
         a: 'Dark clouds, rain, and flooded streets! Rain is common where I live and flooding even more so.',
         b: 'Gloomy skies. Stormy weather is common here but flooding is rare.',
         c: 'I\'m not sure. It can be hard to predict the weather because there is an equal amount of rain and sun where I live.',
         d: 'Sunny weather! I can always expect bright blue skies as it rarely rains here.',
       },
-      background: 'bg-[url(/assets/images/cpq/cpq-bg-3.png)]',
+      background: 'bg-[url(/assets/images/cpq/cpq-bg-3.webp)]',
     },
     {
       question: 'You have to go to work and run some errands today. What does your usual commute look like?',
@@ -31,7 +31,7 @@
         c: 'I like an equal mix of comfort and affordability. I\'ll spend a bit more to get a taxi on days that the weather is bad.',
         d: 'I work from home most days rarely go out, even if it\'s for errands.',
       },
-      background: 'bg-[url(/assets/images/cpq/cpq-bg-4.png)]',
+      background: 'bg-[url(/assets/images/cpq/cpq-bg-4.webp)]',
     },
     {
       question: 'You check your weather application and it says it is going to rain. What do you bring?',
@@ -41,7 +41,7 @@
         c: 'I don\'t have to check the weather app  because I always have an umbrella with me when I go out.',
         d: 'On top of the usual rain gear, I like to make sure I am dressed to stay warm and dry. I really don\'t like getting wet!',
       },
-      background: 'bg-[url(/assets/images/cpq/cpq-bg-5.png)]',
+      background: 'bg-[url(/assets/images/cpq/cpq-bg-5.webp)]',
     },
     {
       question: 'Traffic is bad, and the sky looks extra smoggy. How does this affect your day?',
@@ -51,7 +51,7 @@
         c: 'I\'ll wear a mask or avoid walking in the smoke if I have to go outside, but my schedule is inflexible!',
         d: 'I\'m quite health conscious, so I\'m staying inside today. I\'ll also close my windows and get an air cleaner.',
       },
-      background: 'bg-[url(/assets/images/cpq/cpq-bg-6.png)]',
+      background: 'bg-[url(/assets/images/cpq/cpq-bg-6.webp)]',
     },
     {
       question: 'It\'s a hot day. Out of the blue, you start to get dizzy and you feel a bit faint. What do you do?',
@@ -61,7 +61,7 @@
         c: 'I\'ll move to a cool area and drink from the water bottle or sports drink I always carry.',
         d: 'I do what I can to cool down and stay hydrated. I\'ll also observe myself to see if I experience any other symptoms.',
       },
-      background: 'bg-[url(/assets/images/cpq/cpq-bg-7.png)]',
+      background: 'bg-[url(/assets/images/cpq/cpq-bg-7.webp)]',
     },
     {
       question: 'You decide to take a walk around town. What does your walk look like?',
@@ -71,7 +71,7 @@
         c: 'There are some streets where the air looks a bit thick, but if you plan your route well the walk is tolerable.',
         d: 'The city is nice, the air smells fresh, and I love to take walks outside because of how pleasant it is.',
       },
-      background: 'bg-[url(/assets/images/cpq/cpq-bg-8.png)]',
+      background: 'bg-[url(/assets/images/cpq/cpq-bg-8.webp)]',
     },
     {
       question: 'While at work, the skies start pouring. You have to get home, but the streets are flooded. What do you do?',
@@ -81,7 +81,7 @@
         c: 'I\'ll look for a route to avoid the flooded areas or wait it out, even if it is a little inconvenient for me.',
         d: 'I have rain boots and dry clothes for this exact situation. I like to make sure I\'m dry when I get home.',
       },
-      background: 'bg-[url(/assets/images/cpq/cpq-bg-9.png)]',
+      background: 'bg-[url(/assets/images/cpq/cpq-bg-9.webp)]',
     },
     {
       question: 'After a long week, you decide to spend your Saturday lounging at home. What does your environment feel like?',
@@ -91,7 +91,7 @@
         c: 'I have no complaints. It doesn\'t get too hot or too cool and I have air conditioning to use when I need it.',
         d: 'It\'s cool clean, comfortable, and perfect for spending hours relaxing.',
       },
-      background: 'bg-[url(/assets/images/cpq/cpq-bg-10.png)]',
+      background: 'bg-[url(/assets/images/cpq/cpq-bg-10.webp)]',
     },
   ];
 
@@ -162,7 +162,7 @@
 </script>
 
 <template>
-  <section class="section bg-[url(/assets/images/cpq/cpq-bg-1.png)] bg-size-[100%_100%] text-center" :class="{ 'hidden': step > 0 }">
+  <section class="section bg-[url(/assets/images/cpq/cpq-bg-1.webp)] bg-size-[100%_100%] text-center" :class="{ 'hidden': step > 0 }">
     <div class="container">
       <div class="text-title mb-6">Discover your Climate Personality</div>
       <div class="text-body mb-16 max-w-214">

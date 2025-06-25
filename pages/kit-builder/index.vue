@@ -170,7 +170,7 @@
 </script>
 
 <template>
-  <section class="section bg-[url(/assets/images/kit-builder/kit-builder-bg-1.png)] bg-bottom bg-no-repeat" :class="{ 'hidden': step > 0 }">
+  <section class="section bg-[url(/assets/images/kit-builder/kit-builder-bg-1.webp)] bg-bottom bg-no-repeat" :class="{ 'hidden': step > 0 }">
     <div class="container text-center">
       <div class="text-title mb-6">Build your Climate Care Kit</div>
       <div class="text-body mb-8 max-w-214">Being prepared means having the knowledge and foresight needed to manage your health for the changing climate. One way you can prepare yourself for climate change health risks is by including them in your general health management.</div>
@@ -178,7 +178,7 @@
       <button class="button text-button text-white w-70" @click="step++">Start</button>
     </div>
   </section>
-  <section class="section bg-[url(/assets/images/kit-builder/kit-builder-bg-2.png)] bg-size-[100%_100%]" :class="{ 'hidden': step === 0 }">
+  <section class="section bg-[url(/assets/images/kit-builder/kit-builder-bg-2.webp)] bg-size-[100%_100%]" :class="{ 'hidden': step === 0 }">
     <div class="text-label mb-6 uppercase">{{ kitBuilder[step-1]?.question }}</div>
     <div class="text-h2" :class="{'mb-2': step > 1, 'mb-16': step <=1}">{{ kitBuilder[step-1]?.title }}</div>
     <div class="text-body mb-6">{{ kitBuilder[step-1]?.subtitle }}</div>

@@ -123,17 +123,17 @@
       <div class="text-body2 mb-16">{{ results[result]?.subheader }}</div>
       <div class="flex justify-around w-full mb-16">
         <div class="w-80 flex flex-col items-center justify-center text-center" v-if="results[result]?.risks?.['extreme-heat']">
-          <img class="h-32 w-32" src="/assets/images/cpq-result/cpq-result-extreme-heat-icon.png">
+          <img class="h-32 w-32" src="/assets/images/cpq-result/cpq-result-extreme-heat-icon.webp">
           <div class="text-h2">Extreme Heat</div>
           <div class="text-body">which can lead to illnesses like heat stroke, heat cramps, and others</div>
         </div>
         <div class="w-80 flex flex-col items-center justify-center text-center" v-if="results[result]?.risks?.['rain-and-flooding']">
-          <img class="h-32 w-32" src="/assets/images/cpq-result/cpq-result-rain-and-flooding-icon.png">
+          <img class="h-32 w-32" src="/assets/images/cpq-result/cpq-result-rain-and-flooding-icon.webp">
           <div class="text-h2">Rain and Flooding</div>
           <div class="text-body">which can lead to illnesses like dengue, leptospirosis, and others</div>
         </div>
         <div class="w-80 flex flex-col items-center justify-center text-center" v-if="results[result]?.risks?.['air-pollution']">
-          <img class="h-32" src="/assets/images/cpq-result/cpq-result-air-pollution-icon.png">
+          <img class="h-32" src="/assets/images/cpq-result/cpq-result-air-pollution-icon.webp">
           <div class="text-h2">Air Pollution</div>
           <div class="text-body">which can lead to illnesses like stroke, coronary heart disease, and others</div>
         </div>
@@ -167,7 +167,7 @@
             <li class="mb-4">Dress loosely, lightly, and stay hydrated.</li>
           </ul>
         </div>
-        <img class="h-139 w-139" src="/assets/images/cpq-result/cpq-result-extreme-heat.png">
+        <img class="h-139 w-139" src="/assets/images/cpq-result/cpq-result-extreme-heat.webp">
       </div>
       <div class="flex gap-8 mb-64">
         <div>
@@ -182,7 +182,7 @@
             <li class="mb-4">Use mosquito repellant if your home is in an area with stagnant water</li>
           </ul>
         </div>
-        <img class="h-139 w-139" src="/assets/images/cpq-result/cpq-result-rain-and-flooding.png">
+        <img class="h-139 w-139" src="/assets/images/cpq-result/cpq-result-rain-and-flooding.webp">
       </div>
       <div class="flex gap-8 mb-32">
         <div>
@@ -197,7 +197,7 @@
             <li class="mb-4">If you have to go outdoors when the air quality is bad, wear a high-filtration mask like an N95 or KN95.</li>
           </ul>
         </div>
-        <img class="h-139 w-139" src="/assets/images/cpq-result/cpq-result-air-pollution.png">
+        <img class="h-139 w-139" src="/assets/images/cpq-result/cpq-result-air-pollution.webp">
       </div>
     </div>
   </section>
@@ -206,17 +206,17 @@
       <div class="text-title mb-6">Other Solutions</div>
       <div class="text-body w-214 mb-32">Learning about climate risks to your life is one way to protect yourself from climate change, but it isn't the only one. 
         There are many solutions around you that can help address climate change in your life and your community.</div>
-      <img class="h-50 w-50 mb-4" src="/assets/images/cpq-result/cpq-result-sustainable-icon.png">
+      <img class="h-50 w-50 mb-4" src="/assets/images/cpq-result/cpq-result-sustainable-icon.webp">
       <div class="text-h3 mb-4">Live a more sustainable lifestyle</div>
       <div class="text-body w-214 mb-16">While climate change requires the cooperation of all of society, there are many small adjustments that can help your planet, 
         and can also help you! Eating more plant-based food can be novel and delicious; Taking public transport can help you explore your city; 
         and using energy and water-saving appliances in your own home can save your wallet in the long run.</div>
-      <img class="h-50 w-50 mb-4" src="/assets/images/cpq-result/cpq-result-green-city-icon.png">
+      <img class="h-50 w-50 mb-4" src="/assets/images/cpq-result/cpq-result-green-city-icon.webp">
       <div class="text-h3 mb-4">Support your city's green initiatives and your green city officials</div>
       <div class="text-body w-214 mb-16">Some cities in the Philippines have great green initiatives. For example, Pasig City offers bike sharing programs and free shuttle 
         services alongside programs that help the city cool down amidst the heat. Learning about and supporting these initiatives alongside the officials that promote them 
         can help your community adapt to climate change, and may even be a good way to get involved in the wellbeing of your city!</div>
-      <img class="h-50 w-50 mb-4" src="/assets/images/cpq-result/cpq-result-informed-icon.png">
+      <img class="h-50 w-50 mb-4" src="/assets/images/cpq-result/cpq-result-informed-icon.webp">
       <div class="text-h3 mb-4">Stay informed about different climate change solutions</div>
       <div class="text-body w-214 mb-32">There are many ways to stay informed. There are likely online webinars, classes, and community events in your area that talk about 
         climate change and their solutions. You can even join online groups on social media platforms that are dedicated to connecting members of your community to these very 

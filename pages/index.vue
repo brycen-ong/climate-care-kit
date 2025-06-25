@@ -1,5 +1,5 @@
 <template>
-  <section class="section relative bg-[url(/assets/images/home/home-bg-1.png)] bg-size-[100%_100%] text-center text-white">
+  <section class="section relative bg-[url(/assets/images/home/home-bg-1.webp)] bg-size-[100%_100%] text-center text-white">
     <div class="container">
       <div class="text-title mb-16">How does Climate Change affect my health?</div>
       <div class="text-h2 max-w-214">Climate change is a global health issue...</div>
@@ -14,7 +14,7 @@
       </div>
     </div>
   </section>
-  <section class="section relative bg-[url(/assets/images/home/home-bg-2.png)] bg-size-[100%_100%]" id="heat">
+  <section class="section relative bg-[url(/assets/images/home/home-bg-2.webp)] bg-size-[100%_100%]" id="heat">
     <div class="container">
       <div class="flex justify-between gap-20">
         <div class="w-full flex flex-col item-center justify-center">
@@ -38,7 +38,7 @@
       </div>
     </div>
   </section>
-  <section class="section relative bg-[url(/assets/images/home/home-bg-3.png)] bg-size-[100%_100%]" id="rain">
+  <section class="section relative bg-[url(/assets/images/home/home-bg-3.webp)] bg-size-[100%_100%]" id="rain">
     <div class="container">
       <div class="flex justify-between gap-20">
         <div class="w-full flex flex-col item-center justify-center">
@@ -63,7 +63,7 @@
       </div>
     </div>
   </section>
-  <section class="section relative bg-[url(/assets/images/home/home-bg-4.png)] bg-size-[100%_100%]" id="pollution">
+  <section class="section relative bg-[url(/assets/images/home/home-bg-4.webp)] bg-size-[100%_100%]" id="pollution">
     <div class="container">
       <div class="flex justify-between gap-20">
         <div class="w-full flex flex-col item-center justify-center">
@@ -88,7 +88,7 @@
       </div>
     </div>
   </section>
-  <section class="section text-white bg-[url(/assets/images/home/home-bg-5.png)] bg-size-[100%_100%]" id="steps">
+  <section class="section text-white bg-[url(/assets/images/home/home-bg-5.webp)] bg-size-[100%_100%]" id="steps">
     <div class="container">
       <div class="text-title mb-16">What can I do now?</div>
       <div class="flex justify-between gap-4">

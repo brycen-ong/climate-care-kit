@@ -1,16 +1,16 @@
 <script setup lang="ts">
-import extremeHeatCardImg1 from '@/assets/images/learn-more/extreme-heat/learn-more-eh-card-1.png';
-import extremeHeatCardImg2 from '@/assets/images/learn-more/extreme-heat/learn-more-eh-card-2.png';
-import extremeHeatCardImg3 from '@/assets/images/learn-more/extreme-heat/learn-more-eh-card-3.png';
-import extremeHeatCardImg4 from '@/assets/images/learn-more/extreme-heat/learn-more-eh-card-4.png';
-import rainAndFloodingCardImg1 from '@/assets/images/learn-more/rain-and-flooding/learn-more-raf-card-1.png';
-import rainAndFloodingCardImg2 from '@/assets/images/learn-more/rain-and-flooding/learn-more-raf-card-2.png';
-import rainAndFloodingCardImg3 from '@/assets/images/learn-more/rain-and-flooding/learn-more-raf-card-3.png';
-import rainAndFloodingCardImg4 from '@/assets/images/learn-more/rain-and-flooding/learn-more-raf-card-4.png';
-import airPollutionCardImg1 from '@/assets/images/learn-more/air-pollution/learn-more-ap-card-1.png';
-import airPollutionCardImg2 from '@/assets/images/learn-more/air-pollution/learn-more-ap-card-2.png';
-import airPollutionCardImg3 from '@/assets/images/learn-more/air-pollution/learn-more-ap-card-3.png';
-import airPollutionCardImg4 from '@/assets/images/learn-more/air-pollution/learn-more-ap-card-4.png';
+import extremeHeatCardImg1 from '@/assets/images/learn-more/extreme-heat/learn-more-eh-card-1.webp';
+import extremeHeatCardImg2 from '@/assets/images/learn-more/extreme-heat/learn-more-eh-card-2.webp';
+import extremeHeatCardImg3 from '@/assets/images/learn-more/extreme-heat/learn-more-eh-card-3.webp';
+import extremeHeatCardImg4 from '@/assets/images/learn-more/extreme-heat/learn-more-eh-card-4.webp';
+import rainAndFloodingCardImg1 from '@/assets/images/learn-more/rain-and-flooding/learn-more-raf-card-1.webp';
+import rainAndFloodingCardImg2 from '@/assets/images/learn-more/rain-and-flooding/learn-more-raf-card-2.webp';
+import rainAndFloodingCardImg3 from '@/assets/images/learn-more/rain-and-flooding/learn-more-raf-card-3.webp';
+import rainAndFloodingCardImg4 from '@/assets/images/learn-more/rain-and-flooding/learn-more-raf-card-4.webp';
+import airPollutionCardImg1 from '@/assets/images/learn-more/air-pollution/learn-more-ap-card-1.webp';
+import airPollutionCardImg2 from '@/assets/images/learn-more/air-pollution/learn-more-ap-card-2.webp';
+import airPollutionCardImg3 from '@/assets/images/learn-more/air-pollution/learn-more-ap-card-3.webp';
+import airPollutionCardImg4 from '@/assets/images/learn-more/air-pollution/learn-more-ap-card-4.webp';
 
 
 
@@ -24,10 +24,10 @@ const content = {
     body: 'The warming climate raises global temperatures, which leads to very hot days and nights. These temperatures can be extremely dangerous for our health, and Metro Manila may one day be a deadly hot spot for heat.\n\nOur bodies work best at around 37°C or 98.6°F. If we get too hot, our blood starts to thicken, which makes our heart work harder. Our bodies sweat to cool themselves, but high temperatures and humidity can interfere with our ability to cool down effectively. All this strain on our heart can damage our organs. If our core temperatures rise above 104°F or 40°C, our organs start shutting down and we may get heat stroke.',
     color: 'text-[#D37834]',
     backgrounds: [
-      'bg-[url(/assets/images/learn-more/extreme-heat/learn-more-eh-bg-1.png)]',
-      'bg-[url(/assets/images/learn-more/extreme-heat/learn-more-eh-bg-2.png)]',
-      'bg-[url(/assets/images/learn-more/extreme-heat/learn-more-eh-bg-3.png)]',
-      'bg-[url(/assets/images/learn-more/extreme-heat/learn-more-eh-bg-4.png)]'
+      'bg-[url(/assets/images/learn-more/extreme-heat/learn-more-eh-bg-1.webp)]',
+      'bg-[url(/assets/images/learn-more/extreme-heat/learn-more-eh-bg-2.webp)]',
+      'bg-[url(/assets/images/learn-more/extreme-heat/learn-more-eh-bg-3.webp)]',
+      'bg-[url(/assets/images/learn-more/extreme-heat/learn-more-eh-bg-4.webp)]'
     ],
     spotting: 'dangerous temperatures',
     cards: [
@@ -85,10 +85,10 @@ const content = {
     body: 'Climate change affects the intensity of rain and the quality of water. Floodwater is already polluted, but the warming waters from climate change create an environment for harmful bacteria and pathogens to thrive.\n\nYou may be familiar with some diseases caused by contaminated water, but you may not realize that climate change is making them more severe. Climate change increases the growth and activity of bacteria that causes leptospirosis, of mosquitos that carry dengue, and the pathogens that cause typhoid fever; among other diseases.',
     color: 'text-[#3382C8]',
     backgrounds: [
-      'bg-[url(/assets/images/learn-more/rain-and-flooding/learn-more-raf-bg-1.png)]',
-      'bg-[url(/assets/images/learn-more/rain-and-flooding/learn-more-raf-bg-2.png)]',
-      'bg-[url(/assets/images/learn-more/rain-and-flooding/learn-more-raf-bg-3.png)]',
-      'bg-[url(/assets/images/learn-more/rain-and-flooding/learn-more-raf-bg-4.png)]',
+      'bg-[url(/assets/images/learn-more/rain-and-flooding/learn-more-raf-bg-1.webp)]',
+      'bg-[url(/assets/images/learn-more/rain-and-flooding/learn-more-raf-bg-2.webp)]',
+      'bg-[url(/assets/images/learn-more/rain-and-flooding/learn-more-raf-bg-3.webp)]',
+      'bg-[url(/assets/images/learn-more/rain-and-flooding/learn-more-raf-bg-4.webp)]',
     ],
     spotting: 'contaminated water',
     cards: [
@@ -145,10 +145,10 @@ const content = {
     body: 'Air pollution and climate change are linked. Many of the sources that worsen air quality also contribute to climate change. The warming climate can increase the number of certain air pollutants, including greenhouse gases, which warms the planet further.\n\nAir pollution kills 7 million people each year. Exposure to air pollution can lead to ischemic stroke and heart disease, lung cancer, neurological disorders, pregnancy complications, and other severe health issues. Even short term exposure to poor air quality can have drastic effects on your body depending on the type of pollutant you inhale.',
     color: 'text-[#6E56B9]',
     backgrounds: [
-      'bg-[url(/assets/images/learn-more/air-pollution/learn-more-ap-bg-1.png)]',
-      'bg-[url(/assets/images/learn-more/air-pollution/learn-more-ap-bg-2.png)]',
-      'bg-[url(/assets/images/learn-more/air-pollution/learn-more-ap-bg-3.png)]',
-      'bg-[url(/assets/images/learn-more/air-pollution/learn-more-ap-bg-4.png)]',
+      'bg-[url(/assets/images/learn-more/air-pollution/learn-more-ap-bg-1.webp)]',
+      'bg-[url(/assets/images/learn-more/air-pollution/learn-more-ap-bg-2.webp)]',
+      'bg-[url(/assets/images/learn-more/air-pollution/learn-more-ap-bg-3.webp)]',
+      'bg-[url(/assets/images/learn-more/air-pollution/learn-more-ap-bg-4.webp)]',
     ],
     spotting: 'air pollution',
     cards: [

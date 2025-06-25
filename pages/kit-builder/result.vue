@@ -12,7 +12,7 @@
 <template>
   <section class="section">
     <div class="container text-center">
-      <img src="/assets/images/kit-builder/kit-builder-icon.png" class="mb-2">
+      <img src="/assets/images/kit-builder/kit-builder-icon.webp" class="mb-2">
       <div class="text-h1 mb-8">Assemble your Climate Care Kit</div>
       <div class="text-body mb-8 w-214">Now that you've finished customizing your kit, the next step is to assemble it in real life. A fully stocked health kit can help you when you run into emergencies and is an important reminder to monitor your personal health alongside your environment. 
         Make sure that your health kit is readily available to you and is in an area where you can easily find it.
