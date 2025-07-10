@@ -1,6 +1,10 @@
 <script setup lang="ts">
   const step = ref(0);
   const snackbar = useSnackbar();
+  const { find } = useStrapi();
+  const climatePersonalityQuiz = find('climate-personality-quizzes', {
+    populate: ['background', 'options'],
+  });
 
   const quiz = [
     {
