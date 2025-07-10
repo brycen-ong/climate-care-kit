@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import type { Slug } from '~/types';
 import extremeHeatCardImg1 from '@/assets/images/learn-more/extreme-heat/learn-more-eh-card-1.webp';
 import extremeHeatCardImg2 from '@/assets/images/learn-more/extreme-heat/learn-more-eh-card-2.webp';
 import extremeHeatCardImg3 from '@/assets/images/learn-more/extreme-heat/learn-more-eh-card-3.webp';
@@ -12,9 +13,6 @@ import airPollutionCardImg2 from '@/assets/images/learn-more/air-pollution/learn
 import airPollutionCardImg3 from '@/assets/images/learn-more/air-pollution/learn-more-ap-card-3.webp';
 import airPollutionCardImg4 from '@/assets/images/learn-more/air-pollution/learn-more-ap-card-4.webp';
 
-
-
-type Slug = 'extreme-heat' | 'rain-and-flooding' | 'air-pollution';
 const route = useRoute();
 const slug: Slug = route.params.slug as Slug;
 
@@ -215,16 +213,47 @@ const content = {
       <div class="text-white text-h1 mb-4">Spotting <span class="lowercase">{{ content[slug].title }}</span></div>
       <div class="text-white text-body mb-16 max-w-214">It's important to learn how to spot situations where you may be at risk for {{ content[slug].spotting }}. See if you can guess how these day-to-day activities can turn dangerous.</div>
       <div class="flex gap-6 flex-wrap justify-center">
-        <div v-for="card in content[slug].cards" class="rounded-2xl w-91 h-113 px-2 py-4 bg-white cursor-pointer transition-all hover:translate-y-[-12px]">
-          <div class="w-full flex flex-col items-center justify-center">
-            <img :src="card.card.image" class="max-w-75">
-            <div class="text-body2 mt-10">{{ card.card.title }}</div>
+        <label v-for="card in content[slug].cards" class="block relative rounded-2xl w-91 h-113 px-2 py-4 bg-white cursor-pointer transition-all hover:translate-y-[-12px]">
+          <div class="w-full flex flex-col items-center justify-center" :for="card.card.title">
+            <input type="checkbox" class="absolute invisible peer" :id="card.card.title">
+            <img :src="card.card.image" class="max-w-75 peer-checked:invisible">
+            <div class="text-body2 mt-10 peer-checked:invisible max-w-75">{{ card.card.title }}</div>
+            <div class="absolute invisible peer-checked:visible max-w-75 top-5">
+              <div class="text-body3 mb-4">{{ card.info.title }}</div>
+              <div class="text-body">{{ card.info.body }}</div>
+            </div>
           </div>
           <div></div>
-        </div>
+        </label>
       </div>
     </div>
   </section>
-  <section class="h-33 bg-size-[100%_100%]" :class="content[slug].backgrounds[2]"></section>
-  <section class="section bg-size-[100%_100%]" :class="content[slug].backgrounds[3]"></section>
+  <section class="h-50 bg-size-[100%_100%]" :class="content[slug].backgrounds[2]"></section>
+  <section class="section p-0">
+    <div class="text-h1 mb-4">Staying Prepared</div>
+    <div class="text-body mb-4">Making small adjustments to your lifestyle can help you prepare for times of extreme heat. Here are a few things you can start doing today.</div>
+    <div class="w-[100%] h-291 bg-size-[100%_100%] grid grid-cols-2" :class="content[slug].backgrounds[3]">
+      <div v-for="tip in content[slug].tips" class="flex items-center justify-center" :class="{'last:col-span-2': content[slug].tips.length%2!==0}">
+        <button class="tooltip animate w-16 h-16 group relative" @mouseenter="console.log('tip!')" @mouseleave="console.log('close tip!')">
+          <div class="tooltip-circle w-6 h-6"></div>
+          <div class="invisible group-[:hover]:visible absolute w-120 p-8 bg-white text-body3 drop-shadow-lg top-[115%] text-[#696969]">{{ tip }}</div>
+        </button>
+      </div>
+    </div>
+  </section>
+  <section class="section text-center">
+    <div class="text-h2 mb-12 max-w-214">
+      Keep your water bottles, umbrellas, and other items to battle extreme heat with you at all times.
+    </div>
+    <div class="text-h2 mb-12 max-w-214">
+      Building a Climate Care Kit can keep everything you need together in one place for when you need it.
+    </div>
+    <div class="text-body mb-16 max-w-214">Our kit builder can show you what you need to build a climate-ready health kit for the first time. Take the first step by learning how to build your kit with us.</div>
+    <NuxtLink :to="'/kit-builder'">
+      <button class="button text-button text-white w-70">
+        Build my Kit
+      </button>
+    </NuxtLink>
+    <div class="w-250 h-100 bg-size-[100%_100%] bg-[url(/assets/images/kit-builder/kit-builder-bg-1.webp)]"></div>
+  </section>
 </template>

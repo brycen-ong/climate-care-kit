@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  type Result = 'sunny' | 'chilly' | 'windy' | 'calm';
+  import type { Result } from '~/types';
 
   const route = useRoute();
   const snackbar = useSnackbar();
