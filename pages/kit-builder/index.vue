@@ -165,7 +165,17 @@
   };
 
   function finish() {
-    console.log(answers.value);
+    navigateTo({
+      path: '/kit-builder/result',
+      query: {
+        size: answers.value[0],
+        'extreme-heat': answers.value[1]['extreme-heat'].toString(),
+        'rain-and-flooding': answers.value[1]['rain-and-flooding'].toString(),
+        'air-pollution': answers.value[1]['air-pollution'].toString(),
+        hygiene: answers.value[2].hygiene.toString(),
+        'first-aid': answers.value[2]['first-aid'].toString(),
+      }
+    });
   };
 </script>
 
