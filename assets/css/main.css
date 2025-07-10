@@ -16,6 +16,10 @@
   --text-body2: 20px;
   --text-body2--line-height: 31px;
   --text-body2--font-weight: 400;
+  /*Body3*/
+  --text-body3: 20px;
+  --text-body3--line-height: 31px;
+  --text-body3--font-weight: 600;
   /*H1*/
   --text-h1: 54px;
   --text-h1--line-height: 73px;
@@ -80,6 +84,31 @@
     background-color: #FFAA6B;
     padding: 10px;
   }
+
+  .tooltip {
+    border-radius: 100%;
+    background-color: white;
+    border: 1px solid #FFAA6B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+  }
+
+  .tooltip .tooltip-circle {
+    border-radius: 100%;
+    background-color: #FFAA6B;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+  }
+
+  .tooltip:hover .tooltip-circle {
+    transform: scale(1.50);
+  }
+
   .section {
     width: 100%;
     min-height: 100vh;
