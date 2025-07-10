@@ -68,8 +68,59 @@
             </div>
             <div class="text-body text-left mt-2">Our printable materials have handy information to help you familiarize yourself with climate change health risks. Print them as a reference and keep them with alongside the other climate preparedness items.</div>
           </div>
-          <div class="h-0 overflow-hidden transition-all duration-300" :class="{'h-100': healthKit[0].opened}">
-            helloworld
+          <div class="max-h-0 overflow-hidden transition-all duration-500 border-1 border-[#E3E3E3]" :class="{'max-h-200': healthKit[0].opened}">
+            <ul class="text-[#696969] text-left px-8 py-4">
+              <li class="text-body3 mb-2">Print and save these items</li>
+              <li>
+                <label for="health-primer" class="cursor-pointer flex text-body1">
+                  <input type="checkbox" id="health-primer" class="text-[#E3E3E3] border-[#E3E3E3] me-4 cursor-pointer">
+                  <div>Climate change health primer</div>
+                </label>
+              </li>
+              <li>
+                <label for="flashcard-extreme-heat" class="cursor-pointer flex text-body1">
+                  <input type="checkbox" id="flashcard-extreme-heat" class="text-[#E3E3E3] border-[#E3E3E3] me-4 cursor-pointer">
+                  <div>Flashcards on extreme heat illnesses</div>
+                </label>
+              </li>
+              <li>
+                <label for="flashcard-rain-and-flooding" class="cursor-pointer flex text-body1">
+                  <input type="checkbox" id="flashcard-rain-and-flooding" class="text-[#E3E3E3] border-[#E3E3E3] me-4 cursor-pointer">
+                  <div>Flashcards on illnesses related to rain and flooding</div>
+                </label>
+              </li>
+              <li>
+                <label for="flashcard-air-pollution" class="cursor-pointer flex text-body1">
+                  <input type="checkbox" id="flashcard-air-pollution" class="text-[#E3E3E3] border-[#E3E3E3] me-4 cursor-pointer">
+                  <div>Flashcards on illnesses related to air pollution</div>
+                </label>
+              </li>
+              <li>
+                <label for="stickers" class="cursor-pointer flex text-body1">
+                  <input type="checkbox" id="stickers" class="text-[#E3E3E3] border-[#E3E3E3] me-4 cursor-pointer">
+                  <div>Stickers and labels for your climate care kit</div>
+                </label>
+              </li>
+              <li class="mt-4 text-body3 mb-2">Bring these items with you every day</li>
+              <li>
+                <label for="umbrella" class="cursor-pointer flex text-body1">
+                  <input type="checkbox" id="umbrella" class="text-[#E3E3E3] border-[#E3E3E3] me-4 cursor-pointer">
+                  <div>Umbrella for rain and heat</div>
+                </label>
+              </li>
+              <li>
+                <label for="water" class="cursor-pointer flex text-body1">
+                  <input type="checkbox" id="water" class="text-[#E3E3E3] border-[#E3E3E3] me-4 cursor-pointer">
+                  <div>Water for hydration</div>
+                </label>
+              </li>
+              <li>
+                <label for="mask" class="cursor-pointer flex text-body1">
+                  <input type="checkbox" id="mask" class="text-[#E3E3E3] border-[#E3E3E3] me-4 cursor-pointer">
+                  <div>N95 or KN95 mask for air pollution</div>
+                </label>
+              </li>
+            </ul>
           </div>
         </li>
         <li class="w-214 mb-2">
@@ -81,10 +132,73 @@
                 class="h-6 w-6 !mb-0"
               ></SvgLoader>
             </div>
-            <div class="text-body text-left mt-2">Basic materials to include in every health kit. Check your items every year to make sure they're well stocked. For more information, see our source.</div>
+            <div class="text-body text-left mt-2">Basic materials to include in every health kit according to the American Red Cross. Check your items every year to make sure they're well stocked. For more information, see our source.</div>
           </div>
-          <div class="h-0 overflow-hidden transition-all duration-300" :class="{'h-100': healthKit[1].opened}">
-            helloworld
+          <div class="max-h-0 overflow-hidden transition-all duration-500 border-1 border-[#E3E3E3]" :class="{'max-h-200': healthKit[0].opened}">
+            <ul class="text-[#696969] text-left px-8 py-4">
+              <li class="text-body3 mb-2">Container</li>
+              <li v-if="size === 'large'">
+                <label for="large-container" class="cursor-pointer flex text-body1">
+                  <input type="checkbox" id="large-container" class="text-[#E3E3E3] border-[#E3E3E3] me-4 cursor-pointer">
+                  <div>A large waterproof container with compartments</div>
+                </label>
+              </li>
+              <li v-if="size === 'medium'">
+                <label for="medium-container" class="cursor-pointer flex text-body1">
+                  <input type="checkbox" id="medium-container" class="text-[#E3E3E3] border-[#E3E3E3] me-4 cursor-pointer">
+                  <div>A large waterproof container with compartments</div>
+                </label>
+              </li>
+              <li v-if="size === 'small'">
+                <label for="small-container" class="cursor-pointer flex text-body1">
+                  <input type="checkbox" id="small-container" class="text-[#E3E3E3] border-[#E3E3E3] me-4 cursor-pointer">
+                  <div>A large waterproof container with compartments</div>
+                </label>
+              </li>
+              <li>
+                <label for="flashcard-extreme-heat" class="cursor-pointer flex text-body1">
+                  <input type="checkbox" id="flashcard-extreme-heat" class="text-[#E3E3E3] border-[#E3E3E3] me-4 cursor-pointer">
+                  <div>Flashcards on extreme heat illnesses</div>
+                </label>
+              </li>
+              <li>
+                <label for="flashcard-rain-and-flooding" class="cursor-pointer flex text-body1">
+                  <input type="checkbox" id="flashcard-rain-and-flooding" class="text-[#E3E3E3] border-[#E3E3E3] me-4 cursor-pointer">
+                  <div>Flashcards on illnesses related to rain and flooding</div>
+                </label>
+              </li>
+              <li>
+                <label for="flashcard-air-pollution" class="cursor-pointer flex text-body1">
+                  <input type="checkbox" id="flashcard-air-pollution" class="text-[#E3E3E3] border-[#E3E3E3] me-4 cursor-pointer">
+                  <div>Flashcards on illnesses related to air pollution</div>
+                </label>
+              </li>
+              <li>
+                <label for="stickers" class="cursor-pointer flex text-body1">
+                  <input type="checkbox" id="stickers" class="text-[#E3E3E3] border-[#E3E3E3] me-4 cursor-pointer">
+                  <div>Stickers and labels for your climate care kit</div>
+                </label>
+              </li>
+              <li class="mt-4 text-body3 mb-2">Bring these items with you every day</li>
+              <li>
+                <label for="umbrella" class="cursor-pointer flex text-body1">
+                  <input type="checkbox" id="umbrella" class="text-[#E3E3E3] border-[#E3E3E3] me-4 cursor-pointer">
+                  <div>Umbrella for rain and heat</div>
+                </label>
+              </li>
+              <li>
+                <label for="water" class="cursor-pointer flex text-body1">
+                  <input type="checkbox" id="water" class="text-[#E3E3E3] border-[#E3E3E3] me-4 cursor-pointer">
+                  <div>Water for hydration</div>
+                </label>
+              </li>
+              <li>
+                <label for="mask" class="cursor-pointer flex text-body1">
+                  <input type="checkbox" id="mask" class="text-[#E3E3E3] border-[#E3E3E3] me-4 cursor-pointer">
+                  <div>N95 or KN95 mask for air pollution</div>
+                </label>
+              </li>
+            </ul>
           </div>
         </li>
         <li class="w-214 mb-2">
