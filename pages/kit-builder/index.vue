@@ -58,12 +58,12 @@
       options: {
         hygiene: {
           title: 'Hygiene',
-          subtitle: 'Items for grooming, oral care, and menstrual products',
+          subtitle: 'Items for grooming, oral care.',
           background: 'bg-[#A592E0]',
         },
-        'first-aid': {
-          title: 'First aid',
-          subtitle: 'Additional items for basic first aid',
+        menstrual: {
+          title: 'Menstrual',
+          subtitle: 'Items to include in a period pack',
           background: 'bg-[#FFA691]',
         },
       }
@@ -83,7 +83,7 @@
     },
     2: {
       hygiene: false,
-      'first-aid': false,
+      menstrual: false,
     }
   });
 
@@ -116,8 +116,8 @@
       results.push('hygiene');
     }
 
-    if (answers.value[2]['first-aid']) {
-      results.push('first-aid');
+    if (answers.value[2]['menstrual']) {
+      results.push('menstrual');
     }
 
     if (results.length === 2) {
@@ -173,7 +173,7 @@
         'rain-and-flooding': answers.value[1]['rain-and-flooding'].toString(),
         'air-pollution': answers.value[1]['air-pollution'].toString(),
         hygiene: answers.value[2].hygiene.toString(),
-        'first-aid': answers.value[2]['first-aid'].toString(),
+        menstrual: answers.value[2]['menstrual'].toString(),
       }
     });
   };
