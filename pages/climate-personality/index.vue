@@ -181,7 +181,7 @@
       <div class="text-label mb-6">Question {{ step }}/9</div>
       <div class="text-h3 mb-16">{{ quiz[step-1]?.question }}</div>
       <div class="text-body2 grid grid-cols-2 gap-2 mb-16">
-        <div class="col-span-1" v-for="option in Object.keys(quiz[step-1]?.options || {})">
+        <div class="col-span-1 relative" v-for="option in Object.keys(quiz[step-1]?.options || {})">
           <input type="radio" :id="`${step}-${option}`" :value="option" :name="`${step-1}`" class="absolute opacity-0 peer" v-model="answers[step-1]">
           <label :for="`${step}-${option}`" class="block p-6 rounded-2xl cursor-pointer hover:bg-[#FFF3] peer-checked:ring-1 ring-white/75 peer-checked:bg-[#FFF3]">
             {{ quiz[step-1]?.options?.[option as keyof object] }}

@@ -194,7 +194,7 @@
     <div class="text-body mb-6">{{ kitBuilder[step-1]?.subtitle }}</div>
     <div class="flex items-center justify-center gap-20 text-white text-center mb-16" v-if="step < 4">
       <template v-if="kitBuilder[step-1]?.type === 'radio'">
-        <div v-for="option in Object.keys(kitBuilder[step-1]?.options || {})">
+        <div v-for="option in Object.keys(kitBuilder[step-1]?.options || {})" class="relative">
           <input type="radio" :id="option" :value="option" :name="`${step-1}`" class="absolute opacity-0 peer" v-model="answers[step-1 as keyof object]">
           <label :for="`${option}`" class="rounded-2xl flex flex-col items-center justify-center w-69 h-94 px-[22px] border-10 border-transparent peer-checked:border-white peer-checked:shadow-2xl/25" :class="kitBuilder[step-1].options?.[option as keyof object]['background']">
             <div class="text-h2 mb-2">{{ kitBuilder[step-1].options?.[option as keyof object]['title'] }}</div>
@@ -203,7 +203,7 @@
         </div>
       </template>
       <template v-if="kitBuilder[step-1]?.type === 'checkbox'">
-        <div v-for="option in Object.keys(kitBuilder[step-1]?.options || {})">
+        <div v-for="option in Object.keys(kitBuilder[step-1]?.options || {})" class="relative">
           <input type="checkbox" :id="option" :value="option" class="absolute opacity-0 peer" v-model="answers[step-1 as keyof object][option]">
           <label :for="`${option}`" class="rounded-2xl flex flex-col items-center justify-center w-69 h-94 px-[22px] border-10 border-transparent peer-checked:border-white peer-checked:shadow-2xl/25" :class="kitBuilder[step-1].options?.[option as keyof object]['background']">
             <div class="text-h2 mb-2">{{ kitBuilder[step-1].options?.[option as keyof object]['title'] }}</div>
