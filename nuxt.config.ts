@@ -19,7 +19,7 @@ export default defineNuxtConfig({
     success: '#00A89B',
     error: '#FF7255',
   },
-  modules: ['@vueuse/nuxt', 'nuxt-svgo', 'nuxt-snackbar', '@nuxtjs/strapi'],
+  modules: ['@vueuse/nuxt', 'nuxt-svgo', 'nuxt-snackbar'],
   app: {
     head: {
       htmlAttrs: {
