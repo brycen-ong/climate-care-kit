@@ -3,8 +3,6 @@
   
   function toggle() {
     sourcesOpened.value = !sourcesOpened.value;
-    console.log('toggle');
-    console.log(sourcesOpened.value);
   }
 </script>
 <template>
@@ -146,8 +144,7 @@
           <a class="text-body text-[#696969] hover:text-primary ms-4" target="_blank" href="https://pharmeasy.in/story/best-ways-to-prevent-dengue-fever">Best Ways to Avoid Dengue Fever, Pharmeasy</a>
           <a class="text-body text-[#696969] hover:text-primary ms-4" target="_blank" href="https://www.lung.org/clean-air/outdoors/10-tips-to-protect-yourself">10 Tips to Protect Yourself from Unhealthy Air, American Lung Association</a>
           <a class="text-body text-[#696969] hover:text-primary ms-4 mb-4" target="_blank" href="https://www.metropolisindia.com/blog/preventive-healthcare/air-pollution-diseases-you-need-to-be-aware-of">10 Air Pollution Diseases, Metropolis: The Pathology Specialist</a>
-      </div>
-
+        </div>
       </div>
     </div>
   </section>

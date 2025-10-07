@@ -98,7 +98,7 @@
       condition: true,
       title: 'Climate Preparedness',
       description: 'Our printable materials have handy information to help you familiarize yourself with climate change health risks. Print them as a reference and keep them with alongside the other climate preparedness items.',
-      color: 'bg-[#5AAAF1]',
+      color: '#5AAAF1',
       content: [
         {
           title: 'Print and save these items',
@@ -126,7 +126,7 @@
       condition: true,
       title: 'Basic Materials',
       description: 'Basic materials to include in every health kit according to the American Red Cross. Check your items every year to make sure they\'re well stocked. For more information, see our source.',
-      color: 'bg-[#48BEB5]',
+      color: '#48BEB5',
       content: [
         {
           title: 'Container',
@@ -146,7 +146,7 @@
       condition: extremeHeat,
       title: 'Extreme Heat',
       description: 'Items to stay cool during the extreme heat. For more information, see our source.',
-      color: 'bg-[#D37834]',
+      color: '#D37834',
       content: [
         {
           title: 'Items',
@@ -166,7 +166,7 @@
       condition: rainAndFlooding,
       title: 'Rain and Flooding',
       description: 'Items to stay dry and safe during a rain or flood.',
-      color: 'bg-[#3382C8]',
+      color: '#3382C8',
       content: [
         {
           title: 'Items',
@@ -185,7 +185,7 @@
       condition: airPollution,
       title: 'Air Pollution',
       description: 'Items to protect yourself from air pollution.',
-      color: 'bg-[#907BD2]',
+      color: '#907BD2',
       content: [
         {
           title: 'Items',
@@ -201,7 +201,7 @@
       condition: hygiene,
       title: 'Hygiene Essentials',
       description: 'Items for grooming and oral care.',
-      color: 'bg-[#A592E0]',
+      color: '#A592E0',
       content: [
         {
           title: 'Personal Items',
@@ -222,7 +222,7 @@
       condition: menstrual,
       title: 'Menstrual Hygiene',
       description: 'Items to include in a period pack.',
-      color: 'bg-[#FFA691]',
+      color: '#FFA691',
       content: [
         {
           title: 'Menstrual Items',
@@ -261,7 +261,7 @@
       <div class="text-h2 mb-16">Include the following in your health kit:</div>
       <ul>
         <li class="w-214 mb-2" v-for="(item, index) in visibleHealthKit">
-          <div class="w-full p-8 text-white cursor-pointer" :class="item.color" @click="toggle(index)">
+          <div class="w-full p-8 text-white cursor-pointer" :class="`bg-[${item.color}]`" @click="toggle(index)">
             <div class="flex justify-between">
               <div class="text-h3">{{ item.title }}</div>
               <SvgLoader

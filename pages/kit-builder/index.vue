@@ -13,17 +13,17 @@
         small: {
           title: 'Me',
           subtitle: 'A small kit',
-          background: 'bg-[#5AAAF1]',
+          background: '#5AAAF1',
         },
         medium: {
           title: 'Me and one other person',
           subtitle: 'A medium kit',
-          background: 'bg-[#A592E0]',
+          background: '#A592E0',
         },
         large: {
           title: 'My family',
           subtitle: 'A large kit',
-          background: 'bg-[#53D1C7]',
+          background: '#53D1C7',
         },
       }
     },
@@ -36,17 +36,17 @@
         'extreme-heat': {
           title: 'Extreme heat',
           subtitle: 'I am often exposed to hot temperatures',
-          background: 'bg-[#D37834]',
+          background: '#D37834',
         },
         'rain-and-flooding': {
           title: 'Rain and Flooding',
           subtitle: 'I often pass through rain and flooded areas',
-          background: 'bg-[#5AAAF1]',
+          background: '#5AAAF1',
         },
         'air-pollution': {
           title: 'Air Pollution',
           subtitle: 'I live in an urban area with lots of congestion',
-          background: 'bg-[#907BD2]',
+          background: '#907BD2',
         },
       }
     },
@@ -59,12 +59,12 @@
         hygiene: {
           title: 'Hygiene',
           subtitle: 'Items for grooming, oral care.',
-          background: 'bg-[#A592E0]',
+          background: '#A592E0',
         },
         menstrual: {
           title: 'Menstrual',
           subtitle: 'Items to include in a period pack',
-          background: 'bg-[#FFA691]',
+          background: '#FFA691',
         },
       }
     },
@@ -196,7 +196,7 @@
       <template v-if="kitBuilder[step-1]?.type === 'radio'">
         <div v-for="option in Object.keys(kitBuilder[step-1]?.options || {})" class="relative">
           <input type="radio" :id="option" :value="option" :name="`${step-1}`" class="absolute opacity-0 peer" v-model="answers[step-1 as keyof object]">
-          <label :for="`${option}`" class="rounded-2xl flex flex-col items-center justify-center w-69 h-94 px-[22px] border-10 border-transparent peer-checked:border-white peer-checked:shadow-2xl/25" :class="kitBuilder[step-1].options?.[option as keyof object]['background']">
+          <label :for="`${option}`" class="rounded-2xl flex flex-col items-center justify-center w-69 h-94 px-[22px] border-10 border-transparent peer-checked:border-white peer-checked:shadow-2xl/25" :class="`bg-[${kitBuilder[step-1].options?.[option as keyof object]['background']}]`">
             <div class="text-h2 mb-2">{{ kitBuilder[step-1].options?.[option as keyof object]['title'] }}</div>
             <div class="text-body">{{ kitBuilder[step-1].options?.[option as keyof object]['subtitle'] }}</div>
           </label>
@@ -205,7 +205,7 @@
       <template v-if="kitBuilder[step-1]?.type === 'checkbox'">
         <div v-for="option in Object.keys(kitBuilder[step-1]?.options || {})" class="relative">
           <input type="checkbox" :id="option" :value="option" class="absolute opacity-0 peer" v-model="answers[step-1 as keyof object][option]">
-          <label :for="`${option}`" class="rounded-2xl flex flex-col items-center justify-center w-69 h-94 px-[22px] border-10 border-transparent peer-checked:border-white peer-checked:shadow-2xl/25" :class="kitBuilder[step-1].options?.[option as keyof object]['background']">
+          <label :for="`${option}`" class="rounded-2xl flex flex-col items-center justify-center w-69 h-94 px-[22px] border-10 border-transparent peer-checked:border-white peer-checked:shadow-2xl/25" :class="`bg-[${kitBuilder[step-1].options?.[option as keyof object]['background']}]`">
             <div class="text-h2 mb-2">{{ kitBuilder[step-1].options?.[option as keyof object]['title'] }}</div>
             <div class="text-body">{{ kitBuilder[step-1].options?.[option as keyof object]['subtitle'] }}</div>
           </label>

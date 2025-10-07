@@ -11,10 +11,10 @@
       header: 'You like to be active and you thrive under the sun',
       subheader: 'However, your environments and habits may leave you exposed to these health risks',
       colors: {
-        header: 'text-[#D37834]',
-        bg: 'bg-[#FFFBF6]',
-        personality: 'bg-[#E98A43]',
-        tips: 'bg-[#D37834]',
+        header: '#D37834',
+        bg: '#FFFBF6',
+        personality: '#E98A43',
+        tips: '#D37834',
       },
       risks: {
         'extreme-heat': true,
@@ -35,10 +35,10 @@
       header: 'You are a relaxed person that enjoys spending time at home',
       subheader: 'Still, your environments and habits may leave you exposed to these health risks',
       colors: {
-        header: 'text-[#5AAAF1]',
-        bg: 'bg-[#F6FBFF]',
-        personality: 'bg-[#5AAAF1]',
-        tips: 'bg-[#4499E3]',
+        header: '#5AAAF1',
+        bg: '#F6FBFF',
+        personality: '#5AAAF1',
+        tips: '#4499E3',
       },
       risks: {
         'extreme-heat': true,
@@ -59,10 +59,10 @@
       header: 'You are a busybody with a hectic schedule',
       subheader: 'Your environments and habits may leave you exposed to these health risks',
       colors: {
-        header: 'text-[#A592E0]',
-        bg: 'bg-[#F9F6FF]',
-        personality: 'bg-[#A592E0]',
-        tips: 'bg-[#907BD2]',
+        header: '#A592E0',
+        bg: '#F9F6FF',
+        personality: '#A592E0',
+        tips: '#907BD2',
       },
       risks: {
         'extreme-heat': true,
@@ -83,10 +83,10 @@
       header: 'You are the type that likes to be prepared',
       subheader: 'Still, your environments and habits may leave you exposed to these health risks',
       colors: {
-        header: 'text-[#53D1C7]',
-        bg: 'bg-[#F2FFFE]',
-        personality: 'bg-[#48BEB5]',
-        tips: 'bg-[#00A89B]',
+        header: '#53D1C7',
+        bg: '#F2FFFE',
+        personality: '#48BEB5',
+        tips: '#00A89B',
       },
       risks: {
         'extreme-heat': false,
@@ -117,9 +117,9 @@
 </script>
 
 <template>
-  <section class="section" :class="results[result]?.colors?.bg">
+  <section class="section" :class="`bg-[${results[result]?.colors?.bg}]`">
     <div class="container">
-      <div class="text-h2 mb-6 mt-32" :class="results[result]?.colors?.header">{{ results[result]?.header }}</div>
+      <div class="text-h2 mb-6 mt-32" :class="`text-[${results[result]?.colors?.header}]`">{{ results[result]?.header }}</div>
       <div class="text-body2 mb-16">{{ results[result]?.subheader }}</div>
       <div class="flex justify-around w-full mb-16">
         <div class="w-80 flex flex-col items-center justify-center text-center" v-if="results[result]?.risks?.['extreme-heat']">
@@ -139,11 +139,11 @@
         </div>
       </div>
       <div class="flex gap-7 mb-16">
-        <div class="flex flex-col items-center justify-center h-87 w-full rounded-2xl p-8 text-center text-white" :class="results[result]?.colors?.personality">
+        <div class="flex flex-col items-center justify-center h-87 w-full rounded-2xl p-8 text-center text-white" :class="`bg-[${results[result]?.colors?.personality}]`">
           <div class="text-h2 mb-4">We think you have a <span class="capitalize">{{ result }}</span> Personality</div>
           <div class="text-body mb-4" v-for="personality in results[result]?.personality">{{ personality }}</div>
         </div>
-        <div class="flex flex-col items-center justify-center h-87 w-full rounded-2xl p-8 text-center text-white" :class="results[result]?.colors?.tips">
+        <div class="flex flex-col items-center justify-center h-87 w-full rounded-2xl p-8 text-center text-white" :class="`bg-[${results[result]?.colors?.tips}]`">
           <div class="text-h2 mb-4">Tips to stay healthy</div>
           <div class="text-body mb-4" v-for="tips in results[result]?.tips">{{ tips }}</div>
         </div>
