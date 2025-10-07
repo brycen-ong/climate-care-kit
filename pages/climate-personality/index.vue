@@ -196,12 +196,12 @@
       </div>
       <div class="flex text-button text-white gap-2">
         <button class="button w-34" @click="back">
-          <SvgLoader :icon="'chevron-x'" class="h-4 w-4 me-2 rotate-180"></SvgLoader>
+          <i class="fa-solid fa-chevron-left me-2"></i>
           Back
         </button>
         <button class="button w-34" @click="next">
           {{ step < 9 ? 'Next' : 'Finish' }}
-          <SvgLoader :icon="'chevron-x'" class="h-4 w-4 ms-2"></SvgLoader>
+          <i class="fa-solid fa-chevron-right ms-2"></i>
         </button>
       </div>
     </div>

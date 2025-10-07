@@ -30,6 +30,9 @@ export default defineNuxtConfig({
         { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
         { rel: 'preconnect', href: 'https://fonts.gstatic.com', crossorigin:'' },
         { rel: 'stylesheet', href: 'https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap' },
+      ],
+      script: [
+        { src: 'https://kit.fontawesome.com/52b01bb338.js', crossorigin: 'anonymous'},
       ]
     }
   },

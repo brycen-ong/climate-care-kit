@@ -75,11 +75,7 @@
         <div class="grid grid-cols-3">
           <div class="col-start-2 flex flex-col items-center justify-center text-h3">Sources</div>
           <div class="col-start-3 flex flex-col items-end justify-center">
-            <SvgLoader
-              icon="chevron-y"
-              class="h-6 w-6 transition-all duration-500"
-              :class="{'rotate-180': sourcesOpened}"
-            ></SvgLoader>
+            <i class="fa-solid fa-chevron-down text-2xl transition-all duration-500" :class="{'rotate-180': sourcesOpened}"></i>
           </div>
         </div>
       </div>

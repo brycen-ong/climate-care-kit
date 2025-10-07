@@ -8,7 +8,7 @@
         <div class="text-button mb-4">Scroll Down</div>
         <NuxtLink :to="{ hash: '#heat' }">
           <button class="button button-circle h-16 w-16">
-            <SvgLoader :icon="'chevron-y'" class="w-5 h-5 animate"></SvgLoader>
+            <i class="fa-solid fa-chevron-down animate text-xl"></i>
           </button>
         </NuxtLink>
       </div>
@@ -32,7 +32,7 @@
       <div class="flex flex-col justify-center items-center absolute bottom-19">
         <NuxtLink :to="{ hash: '#rain' }">
           <button class="button button-circle h-16 w-16 bg-white border-2 border-secondary">
-            <SvgLoader :icon="'chevron-y'" class="w-5 h-5 text-secondary animate"></SvgLoader>
+            <i class="fa-solid fa-chevron-down animate text-secondary text-xl"></i>
           </button>
         </NuxtLink>
       </div>
@@ -57,7 +57,7 @@
       <div class="flex flex-col justify-center items-center absolute bottom-19">
         <NuxtLink :to="{ hash: '#pollution' }">
           <button class="button button-circle h-16 w-16 bg-white border-2 border-secondary">
-            <SvgLoader :icon="'chevron-y'" class="w-5 h-5 text-secondary animate"></SvgLoader>
+            <i class="fa-solid fa-chevron-down animate text-xl text-secondary"></i>
           </button>
         </NuxtLink>
       </div>
@@ -82,7 +82,7 @@
         <div class="text-button mb-4">What Now?</div>
         <NuxtLink :to="{ hash: '#steps'}">
           <button class="button button-circle h-16 w-16">
-            <SvgLoader :icon="'chevron-y'" class="w-5 h-5 animate"></SvgLoader>
+            <i class="fa-solid fa-chevron-down animate text-xl"></i>
           </button>
         </NuxtLink>
       </div>
