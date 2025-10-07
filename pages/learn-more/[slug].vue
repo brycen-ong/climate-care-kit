@@ -1,17 +1,29 @@
 <script setup lang="ts">
 import type { Slug } from '~/types';
-import extremeHeatCardImg1 from '@/assets/images/learn-more/extreme-heat/learn-more-eh-card-1.webp';
-import extremeHeatCardImg2 from '@/assets/images/learn-more/extreme-heat/learn-more-eh-card-2.webp';
-import extremeHeatCardImg3 from '@/assets/images/learn-more/extreme-heat/learn-more-eh-card-3.webp';
-import extremeHeatCardImg4 from '@/assets/images/learn-more/extreme-heat/learn-more-eh-card-4.webp';
-import rainAndFloodingCardImg1 from '@/assets/images/learn-more/rain-and-flooding/learn-more-raf-card-1.webp';
-import rainAndFloodingCardImg2 from '@/assets/images/learn-more/rain-and-flooding/learn-more-raf-card-2.webp';
-import rainAndFloodingCardImg3 from '@/assets/images/learn-more/rain-and-flooding/learn-more-raf-card-3.webp';
-import rainAndFloodingCardImg4 from '@/assets/images/learn-more/rain-and-flooding/learn-more-raf-card-4.webp';
-import airPollutionCardImg1 from '@/assets/images/learn-more/air-pollution/learn-more-ap-card-1.webp';
-import airPollutionCardImg2 from '@/assets/images/learn-more/air-pollution/learn-more-ap-card-2.webp';
-import airPollutionCardImg3 from '@/assets/images/learn-more/air-pollution/learn-more-ap-card-3.webp';
-import airPollutionCardImg4 from '@/assets/images/learn-more/air-pollution/learn-more-ap-card-4.webp';
+import extremeHeatCardImg1 from '~/assets/images/learn-more/extreme-heat/learn-more-eh-card-1.webp';
+import extremeHeatCardImg2 from '~/assets/images/learn-more/extreme-heat/learn-more-eh-card-2.webp';
+import extremeHeatCardImg3 from '~/assets/images/learn-more/extreme-heat/learn-more-eh-card-3.webp';
+import extremeHeatCardImg4 from '~/assets/images/learn-more/extreme-heat/learn-more-eh-card-4.webp';
+import extremeHeatBg1 from '~/assets/images/learn-more/extreme-heat/learn-more-eh-bg-1.webp';
+import extremeHeatBg2 from '~/assets/images/learn-more/extreme-heat/learn-more-eh-bg-2.webp';
+import extremeHeatBg3 from '~/assets/images/learn-more/extreme-heat/learn-more-eh-bg-3.webp';
+import extremeHeatBg4 from '~/assets/images/learn-more/extreme-heat/learn-more-eh-bg-4.webp';
+import rainAndFloodingCardImg1 from '~/assets/images/learn-more/rain-and-flooding/learn-more-raf-card-1.webp';
+import rainAndFloodingCardImg2 from '~/assets/images/learn-more/rain-and-flooding/learn-more-raf-card-2.webp';
+import rainAndFloodingCardImg3 from '~/assets/images/learn-more/rain-and-flooding/learn-more-raf-card-3.webp';
+import rainAndFloodingCardImg4 from '~/assets/images/learn-more/rain-and-flooding/learn-more-raf-card-4.webp';
+import rainAndFloodingBg1 from '~/assets/images/learn-more/rain-and-flooding/learn-more-raf-bg-1.webp';
+import rainAndFloodingBg2 from '~/assets/images/learn-more/rain-and-flooding/learn-more-raf-bg-2.webp';
+import rainAndFloodingBg3 from '~/assets/images/learn-more/rain-and-flooding/learn-more-raf-bg-3.webp';
+import rainAndFloodingBg4 from '~/assets/images/learn-more/rain-and-flooding/learn-more-raf-bg-4.webp';
+import airPollutionCardImg1 from '~/assets/images/learn-more/air-pollution/learn-more-ap-card-1.webp';
+import airPollutionCardImg2 from '~/assets/images/learn-more/air-pollution/learn-more-ap-card-2.webp';
+import airPollutionCardImg3 from '~/assets/images/learn-more/air-pollution/learn-more-ap-card-3.webp';
+import airPollutionCardImg4 from '~/assets/images/learn-more/air-pollution/learn-more-ap-card-4.webp';
+import airPollutionBg1 from '~/assets/images/learn-more/air-pollution/learn-more-ap-bg-1.webp';
+import airPollutionBg2 from '~/assets/images/learn-more/air-pollution/learn-more-ap-bg-2.webp';
+import airPollutionBg3 from '~/assets/images/learn-more/air-pollution/learn-more-ap-bg-3.webp';
+import airPollutionBg4 from '~/assets/images/learn-more/air-pollution/learn-more-ap-bg-4.webp';
 
 const route = useRoute();
 const slug: Slug = route.params.slug as Slug;
@@ -22,10 +34,10 @@ const content = {
     body: 'The warming climate raises global temperatures, which leads to very hot days and nights. These temperatures can be extremely dangerous for our health, and Metro Manila may one day be a deadly hot spot for heat.\n\nOur bodies work best at around 37°C or 98.6°F. If we get too hot, our blood starts to thicken, which makes our heart work harder. Our bodies sweat to cool themselves, but high temperatures and humidity can interfere with our ability to cool down effectively. All this strain on our heart can damage our organs. If our core temperatures rise above 104°F or 40°C, our organs start shutting down and we may get heat stroke.',
     color: '#D37834',
     backgrounds: [
-      '/assets/images/learn-more/extreme-heat/learn-more-eh-bg-1.webp',
-      '/assets/images/learn-more/extreme-heat/learn-more-eh-bg-2.webp',
-      '/assets/images/learn-more/extreme-heat/learn-more-eh-bg-3.webp',
-      '/assets/images/learn-more/extreme-heat/learn-more-eh-bg-4.webp'
+      extremeHeatBg1,
+      extremeHeatBg2,
+      extremeHeatBg3,
+      extremeHeatBg4,
     ],
     spotting: 'dangerous temperatures',
     cards: [
@@ -83,10 +95,10 @@ const content = {
     body: 'Climate change affects the intensity of rain and the quality of water. Floodwater is already polluted, but the warming waters from climate change create an environment for harmful bacteria and pathogens to thrive.\n\nYou may be familiar with some diseases caused by contaminated water, but you may not realize that climate change is making them more severe. Climate change increases the growth and activity of bacteria that causes leptospirosis, of mosquitos that carry dengue, and the pathogens that cause typhoid fever; among other diseases.',
     color: '#3382C8',
     backgrounds: [
-      '/assets/images/learn-more/rain-and-flooding/learn-more-raf-bg-1.webp',
-      '/assets/images/learn-more/rain-and-flooding/learn-more-raf-bg-2.webp',
-      '/assets/images/learn-more/rain-and-flooding/learn-more-raf-bg-3.webp',
-      '/assets/images/learn-more/rain-and-flooding/learn-more-raf-bg-4.webp',
+      rainAndFloodingBg1,
+      rainAndFloodingBg2,
+      rainAndFloodingBg3,
+      rainAndFloodingBg4,
     ],
     spotting: 'contaminated water',
     cards: [
@@ -143,10 +155,10 @@ const content = {
     body: 'Air pollution and climate change are linked. Many of the sources that worsen air quality also contribute to climate change. The warming climate can increase the number of certain air pollutants, including greenhouse gases, which warms the planet further.\n\nAir pollution kills 7 million people each year. Exposure to air pollution can lead to ischemic stroke and heart disease, lung cancer, neurological disorders, pregnancy complications, and other severe health issues. Even short term exposure to poor air quality can have drastic effects on your body depending on the type of pollutant you inhale.',
     color: '#6E56B9',
     backgrounds: [
-      '/assets/images/learn-more/air-pollution/learn-more-ap-bg-1.webp',
-      '/assets/images/learn-more/air-pollution/learn-more-ap-bg-2.webp',
-      '/assets/images/learn-more/air-pollution/learn-more-ap-bg-3.webp',
-      '/assets/images/learn-more/air-pollution/learn-more-ap-bg-4.webp',
+      airPollutionBg1,
+      airPollutionBg2,
+      airPollutionBg3,
+      airPollutionBg4,
     ],
     spotting: 'air pollution',
     cards: [
@@ -202,13 +214,13 @@ const content = {
 
 </script>
 <template>
-  <section class="section bg-size-[100%_100%] text-center" :class="`bg-[url(${content[slug].backgrounds[0]})]`">
+  <section class="section bg-size-[100%_100%] text-center" :style="{ backgroundImage: `url(${content[slug].backgrounds[0]})`}">
     <div class="container">
       <div class="text-title mt-24 mb-4" :class="`text-[${content[slug].color}]`">{{ content[slug].title }}</div>
       <div class="text-body whitespace-pre-line">{{ content[slug].body }}</div>
     </div>
   </section>
-  <section class="section bg-size-[100%_100%] text-center" :class="`bg-[url(${content[slug].backgrounds[1]})]`">
+  <section class="section bg-size-[100%_100%] text-center" :style="{ backgroundImage: `url(${content[slug].backgrounds[1]})`}">
     <div class="container">
       <div class="text-white text-h1 mb-4">Spotting <span class="lowercase">{{ content[slug].title }}</span></div>
       <div class="text-white text-body mb-16 max-w-214">It's important to learn how to spot situations where you may be at risk for {{ content[slug].spotting }}. See if you can guess how these day-to-day activities can turn dangerous.</div>
@@ -228,11 +240,11 @@ const content = {
       </div>
     </div>
   </section>
-  <section class="h-50 bg-size-[100%_100%]" :class="`bg-[url(${content[slug].backgrounds[2]})]`"></section>
+  <section class="h-50 bg-size-[100%_100%]" :style="{ backgroundImage: `url(${content[slug].backgrounds[2]})`}"></section>
   <section class="section p-0">
     <div class="text-h1 mb-4">Staying Prepared</div>
     <div class="text-body mb-4">Making small adjustments to your lifestyle can help you prepare for times of extreme heat. Here are a few things you can start doing today.</div>
-    <div class="w-[100%] h-291 bg-size-[100%_100%] grid grid-cols-2" :class="`bg-[url(${content[slug].backgrounds[3]})]`">
+    <div class="w-[100%] h-291 bg-size-[100%_100%] grid grid-cols-2" :style="{ backgroundImage: `url(${content[slug].backgrounds[3]})`}">
       <div v-for="tip in content[slug].tips" class="flex items-center justify-center" :class="{'last:col-span-2': content[slug].tips.length%2!==0}">
         <button class="tooltip animate w-16 h-16 group relative">
           <div class="tooltip-circle w-6 h-6"></div>
