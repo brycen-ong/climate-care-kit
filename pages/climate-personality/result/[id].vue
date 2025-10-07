@@ -117,9 +117,9 @@
 </script>
 
 <template>
-  <section class="section" :class="`bg-[${results[result]?.colors?.bg}]`">
+  <section class="section" :style="{ backgroundColor: results[result]?.colors?.bg }">
     <div class="container">
-      <div class="text-h2 mb-6 mt-32" :class="`text-[${results[result]?.colors?.header}]`">{{ results[result]?.header }}</div>
+      <div class="text-h2 mb-6 mt-32" :style="{ color: results[result]?.colors?.header }">{{ results[result]?.header }}</div>
       <div class="text-body2 mb-16">{{ results[result]?.subheader }}</div>
       <div class="flex justify-around w-full mb-16">
         <div class="w-80 flex flex-col items-center justify-center text-center" v-if="results[result]?.risks?.['extreme-heat']">
@@ -139,11 +139,11 @@
         </div>
       </div>
       <div class="flex gap-7 mb-16">
-        <div class="flex flex-col items-center justify-center h-87 w-full rounded-2xl p-8 text-center text-white" :class="`bg-[${results[result]?.colors?.personality}]`">
+        <div class="flex flex-col items-center justify-center h-87 w-full rounded-2xl p-8 text-center text-white" :style="{ backgroundColor: results[result]?.colors?.personality }">
           <div class="text-h2 mb-4">We think you have a <span class="capitalize">{{ result }}</span> Personality</div>
           <div class="text-body mb-4" v-for="personality in results[result]?.personality">{{ personality }}</div>
         </div>
-        <div class="flex flex-col items-center justify-center h-87 w-full rounded-2xl p-8 text-center text-white" :class="`bg-[${results[result]?.colors?.tips}]`">
+        <div class="flex flex-col items-center justify-center h-87 w-full rounded-2xl p-8 text-center text-white" :style="{ backgroundColor: results[result]?.colors?.tips }">
           <div class="text-h2 mb-4">Tips to stay healthy</div>
           <div class="text-body mb-4" v-for="tips in results[result]?.tips">{{ tips }}</div>
         </div>

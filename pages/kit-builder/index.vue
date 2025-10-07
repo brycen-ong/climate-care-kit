@@ -196,7 +196,7 @@
       <template v-if="kitBuilder[step-1]?.type === 'radio'">
         <div v-for="option in Object.keys(kitBuilder[step-1]?.options || {})" class="relative">
           <input type="radio" :id="option" :value="option" :name="`${step-1}`" class="absolute opacity-0 peer" v-model="answers[step-1 as keyof object]">
-          <label :for="`${option}`" class="rounded-2xl flex flex-col items-center justify-center w-69 h-94 px-[22px] border-10 border-transparent peer-checked:border-white peer-checked:shadow-2xl/25" :class="`bg-[${kitBuilder[step-1].options?.[option as keyof object]['background']}]`">
+          <label :for="`${option}`" class="rounded-2xl flex flex-col items-center justify-center w-69 h-94 px-[22px] border-10 border-transparent peer-checked:border-white peer-checked:shadow-2xl/25" :style="{ backgroundColor: kitBuilder[step-1].options?.[option as keyof object]['background']}">
             <div class="text-h2 mb-2">{{ kitBuilder[step-1].options?.[option as keyof object]['title'] }}</div>
             <div class="text-body">{{ kitBuilder[step-1].options?.[option as keyof object]['subtitle'] }}</div>
           </label>
@@ -205,7 +205,7 @@
       <template v-if="kitBuilder[step-1]?.type === 'checkbox'">
         <div v-for="option in Object.keys(kitBuilder[step-1]?.options || {})" class="relative">
           <input type="checkbox" :id="option" :value="option" class="absolute opacity-0 peer" v-model="answers[step-1 as keyof object][option]">
-          <label :for="`${option}`" class="rounded-2xl flex flex-col items-center justify-center w-69 h-94 px-[22px] border-10 border-transparent peer-checked:border-white peer-checked:shadow-2xl/25" :class="`bg-[${kitBuilder[step-1].options?.[option as keyof object]['background']}]`">
+          <label :for="`${option}`" class="rounded-2xl flex flex-col items-center justify-center w-69 h-94 px-[22px] border-10 border-transparent peer-checked:border-white peer-checked:shadow-2xl/25" :style="{ backgroundColor: kitBuilder[step-1].options?.[option as keyof object]['background']}">
             <div class="text-h2 mb-2">{{ kitBuilder[step-1].options?.[option as keyof object]['title'] }}</div>
             <div class="text-body">{{ kitBuilder[step-1].options?.[option as keyof object]['subtitle'] }}</div>
           </label>

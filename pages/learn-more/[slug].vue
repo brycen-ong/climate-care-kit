@@ -216,7 +216,7 @@ const content = {
 <template>
   <section class="section bg-size-[100%_100%] text-center" :style="{ backgroundImage: `url(${content[slug].backgrounds[0]})`}">
     <div class="container">
-      <div class="text-title mt-24 mb-4" :class="`text-[${content[slug].color}]`">{{ content[slug].title }}</div>
+      <div class="text-title mt-24 mb-4" :style="{ color: content[slug].color }">{{ content[slug].title }}</div>
       <div class="text-body whitespace-pre-line">{{ content[slug].body }}</div>
     </div>
   </section>

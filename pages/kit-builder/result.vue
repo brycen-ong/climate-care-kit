@@ -261,7 +261,7 @@
       <div class="text-h2 mb-16">Include the following in your health kit:</div>
       <ul>
         <li class="w-214 mb-2" v-for="(item, index) in visibleHealthKit">
-          <div class="w-full p-8 text-white cursor-pointer" :class="`bg-[${item.color}]`" :style="{backgroundColor: item.color}" @click="toggle(index)">
+          <div class="w-full p-8 text-white cursor-pointer" :style="{backgroundColor: item.color}" @click="toggle(index)">
             <div class="flex justify-between">
               <div class="text-h3">{{ item.title }}</div>
               <i class="fa-solid fa-plus text-2xl" v-if="!visibleHealthKit[index].opened"></i>
