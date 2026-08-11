@@ -112,7 +112,7 @@
   .section {
     width: 100%;
     min-height: 100vh;
-    padding: 0px 148px;
+    padding: 0px 32px;
     display: flex;
     flex-direction: column;
     justify-content: center;

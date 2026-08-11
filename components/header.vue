@@ -12,7 +12,7 @@ onClickOutside(desktopDropdownMenu, closeDesktopDropdown);
 </script>
 
 <template>
-  <header class="flex px-16 w-full -mt-20 h-20 justify-center bg-white/10 sticky top-0 z-10">
+  <header class="fixed top-0 inset-x-0 z-10 flex px-16 w-full h-20 justify-center bg-white/10">
     <div class="flex w-full max-w-360 justify-between items-center">
       <NuxtLink :to="'/'" @click="isMenuOpen = false">
         <img src="/assets/images/logos/logo.webp" class="h-20 w-20">

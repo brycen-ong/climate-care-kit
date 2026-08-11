@@ -22,6 +22,7 @@ export default defineNuxtConfig({
   modules: ['@vueuse/nuxt', 'nuxt-svgo', 'nuxt-snackbar'],
   app: {
     head: {
+      title: 'Climate Care Kit',
       htmlAttrs: {
         lang: 'en',
         class: 'scroll-smooth'
