@@ -1,6 +1,5 @@
 <script setup lang="ts">
   import type {
-    Icon,
     Size,
   } from '~/types';
 
@@ -94,7 +93,7 @@
   const healthKit= ref([
     {
       opened: false,
-      icon: 'plus' as Icon,
+      icon: 'plus',
       condition: true,
       title: 'Climate Preparedness',
       description: 'Our printable materials have handy information to help you familiarize yourself with climate change health risks. Print them as a reference and keep them with alongside the other climate preparedness items.',
@@ -122,7 +121,7 @@
     },
     {
       opened: false,
-      icon: 'plus' as Icon,
+      icon: 'plus',
       condition: true,
       title: 'Basic Materials',
       description: 'Basic materials to include in every health kit according to the American Red Cross. Check your items every year to make sure they\'re well stocked. For more information, see our source.',
@@ -142,7 +141,7 @@
     },
     {
       opened: false,
-      icon: 'plus' as Icon,
+      icon: 'plus',
       condition: extremeHeat,
       title: 'Extreme Heat',
       description: 'Items to stay cool during the extreme heat. For more information, see our source.',
@@ -162,7 +161,7 @@
     },
     {
       opened: false,
-      icon: 'plus' as Icon,
+      icon: 'plus',
       condition: rainAndFlooding,
       title: 'Rain and Flooding',
       description: 'Items to stay dry and safe during a rain or flood.',
@@ -181,7 +180,7 @@
     },
     {
       opened: false,
-      icon: 'plus' as Icon,
+      icon: 'plus',
       condition: airPollution,
       title: 'Air Pollution',
       description: 'Items to protect yourself from air pollution.',
@@ -197,7 +196,7 @@
     },
     {
       opened: false,
-      icon: 'plus' as Icon,
+      icon: 'plus',
       condition: hygiene,
       title: 'Hygiene Essentials',
       description: 'Items for grooming and oral care.',
@@ -218,7 +217,7 @@
     },
     {
       opened: false,
-      icon: 'plus' as Icon,
+      icon: 'plus',
       condition: menstrual,
       title: 'Menstrual Hygiene',
       description: 'Items to include in a period pack.',
@@ -252,15 +251,15 @@
     <div class="container text-center pt-24">
       <img src="/assets/images/kit-builder/kit-builder-icon.webp" class="mb-2">
       <div class="text-h1 mb-8">Assemble your Climate Care Kit</div>
-      <div class="text-body mb-8 w-214">Now that you've finished customizing your kit, the next step is to assemble it in real life. A fully stocked health kit can help you when you run into emergencies and is an important reminder to monitor your personal health alongside your environment. 
+      <div class="text-body mb-8 lg:w-214">Now that you've finished customizing your kit, the next step is to assemble it in real life. A fully stocked health kit can help you when you run into emergencies and is an important reminder to monitor your personal health alongside your environment. 
         Make sure that your health kit is readily available to you and is in an area where you can easily find it.
       </div>
-      <div class="text-body w-214 mb-16">
+      <div class="text-body mb-16 lg:w-214">
         Besides your Climate Care Kit, the best thing you can do to stay prepared is to take climate change health risks seriously. Stay informed on the different risks you encounter in your life, make lifestyle adjustments to prevent them, and support solutions to help reduce climate change.
       </div>
       <div class="text-h2 mb-16">Include the following in your health kit:</div>
       <ul>
-        <li class="w-214 mb-2" v-for="(item, index) in visibleHealthKit">
+        <li class="mb-2 lg:w-214" v-for="(item, index) in visibleHealthKit">
           <div class="w-full p-8 text-white cursor-pointer" :style="{backgroundColor: item.color}" @click="toggle(index)">
             <div class="flex justify-between">
               <div class="text-h3">{{ item.title }}</div>

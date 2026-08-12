@@ -182,32 +182,32 @@
 <template>
   <section class="section bg-[url(/assets/images/kit-builder/kit-builder-bg-1.webp)] bg-bottom bg-no-repeat" :class="{ 'hidden': step > 0 }">
     <div class="container text-center">
-      <div class="text-title mb-6">Build your Climate Care Kit</div>
-      <div class="text-body mb-8 max-w-214">Being prepared means having the knowledge and foresight needed to manage your health for the changing climate. One way you can prepare yourself for climate change health risks is by including them in your general health management.</div>
-      <div class="text-body mb-16 max-w-214">Our kit builder can show you what you need to build a climate-ready health kit for the first time. Take the first step by learning how to build your kit with us.</div>
+      <div class="text-5xl font-medium lg:text-title mb-6">Build your Climate Care Kit</div>
+      <div class="text-md mb-6 lg:text-body lg:mb-8 max-w-214">Being prepared means having the knowledge and foresight needed to manage your health for the changing climate. One way you can prepare yourself for climate change health risks is by including them in your general health management.</div>
+      <div class="text-md mb-6 lg:text-body lg:mb-16 max-w-214">Our kit builder can show you what you need to build a climate-ready health kit for the first time. Take the first step by learning how to build your kit with us.</div>
       <button class="button text-button text-white w-70" @click="step++">Start</button>
     </div>
   </section>
-  <section class="section bg-[url(/assets/images/kit-builder/kit-builder-bg-2.webp)] bg-size-[100%_100%]" :class="{ 'hidden': step === 0 }">
-    <div class="text-label mb-6 uppercase">{{ kitBuilder[step-1]?.question }}</div>
-    <div class="text-h2" :class="{'mb-2': step > 1, 'mb-16': step <=1}">{{ kitBuilder[step-1]?.title }}</div>
-    <div class="text-body mb-6">{{ kitBuilder[step-1]?.subtitle }}</div>
-    <div class="flex items-center justify-center gap-20 text-white text-center mb-16" v-if="step < 4">
+  <section class="section justify-start text-center mt-20 bg-[url(/assets/images/kit-builder/kit-builder-bg-2.webp)] bg-center bg-size-[auto_100%] lg:bg-size-[100%_100%] lg:justify-center lg:mt-0" :class="{ 'hidden': step === 0 }">
+    <div class="text-md mb-2 uppercase lg:text-label lg:mb-6">{{ kitBuilder[step-1]?.question }}</div>
+    <div class="text-xl mb-2 font-bold lg:text-h2" :class="{'lg:mb-2': step > 1, 'lg:mb-16': step <=1}">{{ kitBuilder[step-1]?.title }}</div>
+    <div class="text-md lg:text-body mb-6">{{ kitBuilder[step-1]?.subtitle }}</div>
+    <div class="flex flex-col w-full justify-center gap-6 text-white text-center mb-6 lg:mb-16 lg:flex-row lg:items-center lg:gap-20" v-if="step < 4">
       <template v-if="kitBuilder[step-1]?.type === 'radio'">
         <div v-for="option in Object.keys(kitBuilder[step-1]?.options || {})" class="relative">
           <input type="radio" :id="option" :value="option" :name="`${step-1}`" class="absolute opacity-0 peer" v-model="answers[step-1 as keyof object]">
-          <label :for="`${option}`" class="rounded-2xl flex flex-col items-center justify-center w-69 h-94 px-[22px] border-10 border-transparent peer-checked:border-white peer-checked:shadow-2xl/25" :style="{ backgroundColor: kitBuilder[step-1].options?.[option as keyof object]['background']}">
-            <div class="text-h2 mb-2">{{ kitBuilder[step-1].options?.[option as keyof object]['title'] }}</div>
-            <div class="text-body">{{ kitBuilder[step-1].options?.[option as keyof object]['subtitle'] }}</div>
+          <label :for="`${option}`" class="rounded-2xl flex flex-col items-center justify-center h-40 px-[22px] border-10 border-transparent peer-checked:border-white peer-checked:shadow-2xl/25 lg:w-69 lg:h-94" :style="{ backgroundColor: kitBuilder[step-1].options?.[option as keyof object]['background']}">
+            <div class="text-2xl font-bold lg:text-h2 mb-2">{{ kitBuilder[step-1].options?.[option as keyof object]['title'] }}</div>
+            <div class="text-lg lg:text-body">{{ kitBuilder[step-1].options?.[option as keyof object]['subtitle'] }}</div>
           </label>
         </div>
       </template>
       <template v-if="kitBuilder[step-1]?.type === 'checkbox'">
         <div v-for="option in Object.keys(kitBuilder[step-1]?.options || {})" class="relative">
           <input type="checkbox" :id="option" :value="option" class="absolute opacity-0 peer" v-model="answers[step-1 as keyof object][option]">
-          <label :for="`${option}`" class="rounded-2xl flex flex-col items-center justify-center w-69 h-94 px-[22px] border-10 border-transparent peer-checked:border-white peer-checked:shadow-2xl/25" :style="{ backgroundColor: kitBuilder[step-1].options?.[option as keyof object]['background']}">
-            <div class="text-h2 mb-2">{{ kitBuilder[step-1].options?.[option as keyof object]['title'] }}</div>
-            <div class="text-body">{{ kitBuilder[step-1].options?.[option as keyof object]['subtitle'] }}</div>
+          <label :for="`${option}`" class="rounded-2xl flex flex-col items-center justify-center h-40 px-[22px] border-10 border-transparent peer-checked:border-white peer-checked:shadow-2xl/25 lg:w-69 lg:h-94" :style="{ backgroundColor: kitBuilder[step-1].options?.[option as keyof object]['background']}">
+            <div class="text-2xl font-bold lg:text-h2 mb-2">{{ kitBuilder[step-1].options?.[option as keyof object]['title'] }}</div>
+            <div class="text-lg lg:text-body">{{ kitBuilder[step-1].options?.[option as keyof object]['subtitle'] }}</div>
           </label>
         </div>
       </template>
