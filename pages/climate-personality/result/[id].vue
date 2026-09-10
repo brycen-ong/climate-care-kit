@@ -118,32 +118,32 @@
 
 <template>
   <section class="section" :style="{ backgroundColor: results[result]?.colors?.bg }">
-    <div class="container">
+    <div class="container text-center lg:text-left">
       <div class="text-h2 mb-6 mt-32" :style="{ color: results[result]?.colors?.header }">{{ results[result]?.header }}</div>
       <div class="text-body2 mb-16">{{ results[result]?.subheader }}</div>
-      <div class="flex justify-around w-full mb-16">
-        <div class="w-80 flex flex-col items-center justify-center text-center" v-if="results[result]?.risks?.['extreme-heat']">
+      <div class="flex flex-col justify-around w-full mb-16 lg:flex-row">
+        <div class="flex flex-col items-center justify-center text-center lg:w-80" v-if="results[result]?.risks?.['extreme-heat']">
           <img class="h-32 w-32" src="/assets/images/cpq-result/cpq-result-extreme-heat-icon.webp">
           <div class="text-h2">Extreme Heat</div>
           <div class="text-body">which can lead to illnesses like heat stroke, heat cramps, and others</div>
         </div>
-        <div class="w-80 flex flex-col items-center justify-center text-center" v-if="results[result]?.risks?.['rain-and-flooding']">
+        <div class="flex flex-col items-center justify-center text-center lg:w-80" v-if="results[result]?.risks?.['rain-and-flooding']">
           <img class="h-32 w-32" src="/assets/images/cpq-result/cpq-result-rain-and-flooding-icon.webp">
           <div class="text-h2">Rain and Flooding</div>
           <div class="text-body">which can lead to illnesses like dengue, leptospirosis, and others</div>
         </div>
-        <div class="w-80 flex flex-col items-center justify-center text-center" v-if="results[result]?.risks?.['air-pollution']">
+        <div class="flex flex-col items-center justify-center text-center lg:w-80" v-if="results[result]?.risks?.['air-pollution']">
           <img class="h-32" src="/assets/images/cpq-result/cpq-result-air-pollution-icon.webp">
           <div class="text-h2">Air Pollution</div>
           <div class="text-body">which can lead to illnesses like stroke, coronary heart disease, and others</div>
         </div>
       </div>
-      <div class="flex gap-7 mb-16">
-        <div class="flex flex-col items-center justify-center h-87 w-full rounded-2xl p-8 text-center text-white" :style="{ backgroundColor: results[result]?.colors?.personality }">
+      <div class="flex flex-col gap-7 mb-16 lg:flex-row">
+        <div class="flex flex-col items-center justify-center w-full rounded-2xl p-8 text-center text-white lg:h-87" :style="{ backgroundColor: results[result]?.colors?.personality }">
           <div class="text-h2 mb-4">We think you have a <span class="capitalize">{{ result }}</span> Personality</div>
           <div class="text-body mb-4" v-for="personality in results[result]?.personality">{{ personality }}</div>
         </div>
-        <div class="flex flex-col items-center justify-center h-87 w-full rounded-2xl p-8 text-center text-white" :style="{ backgroundColor: results[result]?.colors?.tips }">
+        <div class="flex flex-col items-center justify-center w-full rounded-2xl p-8 text-center text-white lg:h-87" :style="{ backgroundColor: results[result]?.colors?.tips }">
           <div class="text-h2 mb-4">Tips to stay healthy</div>
           <div class="text-body mb-4" v-for="tips in results[result]?.tips">{{ tips }}</div>
         </div>
@@ -152,10 +152,10 @@
     </div>
   </section>
   <section class="section">
-    <div class="container">
-      <div class="text-h1 my-32">What do my risks mean?</div>
-      <div class="flex gap-8 mb-64">
-        <div>
+    <div class="container text-center lg:text-left">
+      <div class="text-5xl lg:text-h1 my-8 lg:my-32">What do my risks mean?</div>
+      <div class="flex flex-col gap-8 mb-32 lg:mb-64 lg:flex-row">
+        <div class="order-2">
           <div class="text-h1 mb-4">Extreme Heat</div>
           <div class="text-body mb-8">Heat illnesses affect people of all ages. The summer temperatures in the Philippines have caused hundreds of students, 
             among others, to fall ill. Although you may not realize it, your health may be at risk. It is important not to underestimate the intensity 
@@ -167,10 +167,10 @@
             <li class="mb-4">Dress loosely, lightly, and stay hydrated.</li>
           </ul>
         </div>
-        <img class="h-139 w-139" src="/assets/images/cpq-result/cpq-result-extreme-heat.webp">
+        <img class="order-1 w-full lg:h-139 lg:w-139" src="/assets/images/cpq-result/cpq-result-extreme-heat.webp">
       </div>
-      <div class="flex gap-8 mb-64">
-        <div>
+      <div class="flex flex-col gap-8 mb-32 lg:mb-64 lg:flex-row">
+        <div class="order-2">
           <div class="text-h1 mb-4">Rain and Flooding</div>
           <div class="text-body mb-8">Many insect, bacterial, and water-borne diseases do better in the warmer weather brought about by climate change. 
             Exposure to city flood water may expose you to conditions as common as hypothermia or as deadly as leptospirosis and dengue. 
@@ -182,10 +182,10 @@
             <li class="mb-4">Use mosquito repellant if your home is in an area with stagnant water</li>
           </ul>
         </div>
-        <img class="h-139 w-139" src="/assets/images/cpq-result/cpq-result-rain-and-flooding.webp">
+        <img class="order-1 w-full lg:h-139 lg:w-139" src="/assets/images/cpq-result/cpq-result-rain-and-flooding.webp">
       </div>
-      <div class="flex gap-8 mb-32">
-        <div>
+      <div class="flex flex-col gap-8 mb-32 lg:flex-row">
+        <div class="order-2">
           <div class="text-h1 mb-4">Air Pollution</div>
           <div class="text-body mb-8">Climate change makes air pollution worse by increasing outside air pollutants. 
             Air pollution is one of the causes for stroke and some heart diseases, among other cardiorespiratory complications. 
@@ -197,31 +197,31 @@
             <li class="mb-4">If you have to go outdoors when the air quality is bad, wear a high-filtration mask like an N95 or KN95.</li>
           </ul>
         </div>
-        <img class="h-139 w-139" src="/assets/images/cpq-result/cpq-result-air-pollution.webp">
+        <img class="order-1 w-full lg:h-139 lg:w-139" src="/assets/images/cpq-result/cpq-result-air-pollution.webp">
       </div>
     </div>
   </section>
   <section class="section">
-    <div class="container">
-      <div class="text-title mb-6">Other Solutions</div>
-      <div class="text-body w-214 mb-32">Learning about climate risks to your life is one way to protect yourself from climate change, but it isn't the only one. 
+    <div class="container text-center lg:text-left">
+      <div class="text-6xl mb-6 lg:text-title">Other Solutions</div>
+      <div class="text-body w-full mb-16 lg:w-214 lg:mb-32">Learning about climate risks to your life is one way to protect yourself from climate change, but it isn't the only one. 
         There are many solutions around you that can help address climate change in your life and your community.</div>
       <img class="h-50 w-50 mb-4" src="/assets/images/cpq-result/cpq-result-sustainable-icon.webp">
       <div class="text-h3 mb-4">Live a more sustainable lifestyle</div>
-      <div class="text-body w-214 mb-16">While climate change requires the cooperation of all of society, there are many small adjustments that can help your planet, 
+      <div class="text-body w-full mb-8 lg:w-214 lg:mb-16">While climate change requires the cooperation of all of society, there are many small adjustments that can help your planet, 
         and can also help you! Eating more plant-based food can be novel and delicious; Taking public transport can help you explore your city; 
         and using energy and water-saving appliances in your own home can save your wallet in the long run.</div>
       <img class="h-50 w-50 mb-4" src="/assets/images/cpq-result/cpq-result-green-city-icon.webp">
       <div class="text-h3 mb-4">Support your city's green initiatives and your green city officials</div>
-      <div class="text-body w-214 mb-16">Some cities in the Philippines have great green initiatives. For example, Pasig City offers bike sharing programs and free shuttle 
+      <div class="text-body w-full mb-8 lg:w-214 lg:mb-16">Some cities in the Philippines have great green initiatives. For example, Pasig City offers bike sharing programs and free shuttle 
         services alongside programs that help the city cool down amidst the heat. Learning about and supporting these initiatives alongside the officials that promote them 
         can help your community adapt to climate change, and may even be a good way to get involved in the wellbeing of your city!</div>
       <img class="h-50 w-50 mb-4" src="/assets/images/cpq-result/cpq-result-informed-icon.webp">
       <div class="text-h3 mb-4">Stay informed about different climate change solutions</div>
-      <div class="text-body w-214 mb-32">There are many ways to stay informed. There are likely online webinars, classes, and community events in your area that talk about 
+      <div class="text-body w-full mb-8 lg:w-214 lg:mb-16">There are many ways to stay informed. There are likely online webinars, classes, and community events in your area that talk about 
         climate change and their solutions. You can even join online groups on social media platforms that are dedicated to connecting members of your community to these very 
         learning opportunities.</div>
-      <div class="w-214 pt-16 pb-32">
+      <div class="w-full pt-16 pb-32 lg:w-214">
         <div class="w-full flex flex-col items-center justify-center text-white text-center bg-[#00A89B]/80 p-8 rounded-2xl">
           <div class="text-h2 mb-4">Build your Climate Care Kit</div>
           <div class="text-body mb-8">Preparedness starts with you. One step you can take to protect your health is by including climate-ready items in your personal health kit. 

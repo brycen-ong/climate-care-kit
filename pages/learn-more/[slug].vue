@@ -214,13 +214,13 @@ const content = {
 
 </script>
 <template>
-  <section class="section bg-size-[100%_100%] text-center" :style="{ backgroundImage: `url(${content[slug].backgrounds[0]})`}">
+  <section class="section bg-size-[auto_100%] bg-center text-center lg:bg-size-[100%_100%]" :style="{ backgroundImage: `url(${content[slug].backgrounds[0]})`}">
     <div class="container">
-      <div class="text-title mt-24 mb-4" :style="{ color: content[slug].color }">{{ content[slug].title }}</div>
-      <div class="text-body whitespace-pre-line">{{ content[slug].body }}</div>
+      <div class="text-8xl font-medium lg:text-title mt-24 mb-4" :style="{ color: content[slug].color }">{{ content[slug].title }}</div>
+      <div class="text-lg lg:text-body whitespace-pre-line">{{ content[slug].body }}</div>
     </div>
   </section>
-  <section class="section bg-size-[100%_100%] text-center" :style="{ backgroundImage: `url(${content[slug].backgrounds[1]})`}">
+  <section class="section bg-size-[auto_100%] bg-center text-center lg:bg-size-[100%_100%]" :style="{ backgroundImage: `url(${content[slug].backgrounds[1]})`}">
     <div class="container">
       <div class="text-white text-h1 mb-4">Spotting <span class="lowercase">{{ content[slug].title }}</span></div>
       <div class="text-white text-body mb-16 max-w-214">It's important to learn how to spot situations where you may be at risk for {{ content[slug].spotting }}. See if you can guess how these day-to-day activities can turn dangerous.</div>
@@ -240,15 +240,15 @@ const content = {
       </div>
     </div>
   </section>
-  <section class="h-50 bg-size-[100%_100%]" :style="{ backgroundImage: `url(${content[slug].backgrounds[2]})`}"></section>
-  <section class="section p-0">
+  <section class="h-25 bg-size-[auto_100%] lg:bg-size-[100%_100%] lg:h-50" :style="{ backgroundImage: `url(${content[slug].backgrounds[2]})`}"></section>
+  <section class="section lg:p-0">
     <div class="text-h1 mb-4">Staying Prepared</div>
     <div class="text-body mb-4">Making small adjustments to your lifestyle can help you prepare for times of extreme heat. Here are a few things you can start doing today.</div>
-    <div class="w-[100%] h-291 bg-size-[100%_100%] grid grid-cols-2" :style="{ backgroundImage: `url(${content[slug].backgrounds[3]})`}">
+    <div class="w-full h-70 bg-size-[auto_100%] bg-center grid grid-cols-2 lg:h-291 lg:bg-size-[100%_100%]" :style="{ backgroundImage: `url(${content[slug].backgrounds[3]})`}">
       <div v-for="tip in content[slug].tips" class="flex items-center justify-center" :class="{'last:col-span-2': content[slug].tips.length%2!==0}">
         <button class="tooltip animate w-16 h-16 group relative">
           <div class="tooltip-circle w-6 h-6"></div>
-          <div class="invisible group-[:hover]:visible absolute w-120 p-8 bg-white text-body3 drop-shadow-lg top-[115%] text-[#696969]">{{ tip }}</div>
+          <div class="invisible group-[:hover]:visible min-w-50 absolute p-8 bg-white text-body3 drop-shadow-lg top-[115%] text-[#696969] z-10 lg:w-120">{{ tip }}</div>
         </button>
       </div>
     </div>
@@ -266,6 +266,6 @@ const content = {
         Build my Kit
       </button>
     </NuxtLink>
-    <div class="w-250 h-100 bg-size-[100%_100%] bg-[url(/assets/images/kit-builder/kit-builder-bg-1.webp)]"></div>
+    <div class="w-full bg-size-[auto_100%] bg-center h-100 bg-[url(/assets/images/kit-builder/kit-builder-bg-1.webp)] lg:bg-size-[100%_100%] lg:w-250"></div>
   </section>
 </template>

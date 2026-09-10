@@ -6,12 +6,12 @@
   }
 </script>
 <template>
-  <section class="section bg-[url(/assets/images/about/about-bg-1.webp)] bg-size-[100%_100%]">
+  <section class="section bg-[url(/assets/images/about/about-bg-1.webp)] bg-size-[auto_100%]lg:bg-size-[100%_100%]">
     <div class="container items-start">
-      <div class="text-h1 max-w-165">Climate change affects more than the environment...</div>
+      <div class="text-5xl font-medium max-w-165 lg:text-h1">Climate change affects more than the environment...</div>
       <div class="text-body mt-8 max-w-139">In the Philippines, common depictions of climate change include natural disasters in far-off communities. While these disasters are devastating, we may forget that it also affects our day-to-day health as well.</div>
       <div class="text-body mt-8 max-w-139">Climate change is an issue of public health. As early as now, we need to start preparing for the situations that will arise because of the changing climate.</div>
-      <div class="bg-white mt-8 rounded-2xl w-139 p-4">
+      <div class="bg-white mt-8 rounded-2xl p-4 lg:w-139">
         <div class="text-label italic">Note: Climate Care Kit is a student-researched project, and is not intended to be taken as professional medical advice. Always consult your healthcare providers for any concerns about your health.</div>
         <div class="text-label italic mt-5">Does any of the information seem inaccurate to you? Is there anything you think we should know? Email us at <a href="mailto:climatecarekit@gmail.com" class="text-primary">climatecarekit@gmail.com</a></div>
       </div>
@@ -20,7 +20,7 @@
   <section class="section bg-[url(/assets/images/about/about-bg-2.webp)] bg-size-[100%_100%] text-center text-white">
     <div class="container">
       <div class="text-h1 mb-3">What does climate change mean for...</div>
-      <div class="grid grid-cols-3 gap-37">
+      <div class="grid grid-cols-1 lg:grid-cols-3 lg:gap-37">
         <div class="flex flex-col items-center justify-center">
           <img src="/assets/images/about/about-city-icon.webp" class="h-40 mb-10"></img>
           <div class="text-h2 mb-6">City Dwellers</div>
@@ -39,9 +39,9 @@
       </div>
     </div>
   </section>
-  <section class="section bg-[url(/assets/images/about/about-bg-3.webp)] bg-size-[100%_100%]">
+  <section class="section bg-[url(/assets/images/about/about-bg-3.webp)] bg-size-[auto_100%] bg-position-[-180px] lg:bg-size-[100%_100%]">
     <div class="container">
-      <div class="grid grid-cols-2">
+      <div class="grid grid-cols-1 lg:grid-cols-2">
         <div class="col-start-2 flex flex-col items-start">
           <div class="text-h1">Introducing Climate Care Kit</div>
           <div class="text-body max-w-139 mb-14">Climate Care Kit is a student project that aims to motivate young adults in Metro Manila to prepare for climate change related health risks. While the website is geared towards a younger audience, people of all changes should start preparing for climate change.</div>
@@ -54,7 +54,7 @@
   </section>
   <section class="section">
     <div class="container">
-      <div class="grid grid-cols-2">
+      <div class="grid grid-cols-1 lg:grid-cols-2">
         <div class="flex flex-col items-start max-w-110 justify-center">
           <div class="text-h2">About the designer</div>
           <div class="text-body mb-9 text-[#696969]">Casey del Rosario is a gradute of Information Design from Ateneo de Manila University. She believes in using exciting design to help make the world a better place.</div>
@@ -67,7 +67,7 @@
       </div>
     </div>
   </section>
-  <section class="w-[100%] py-37 flex flex-col justify-center items-center">
+  <section class="w-[100%] px-8 py-37 flex flex-col justify-center items-center lg:px-0">
     <div class="container">
       <div class="text-h1">Our Sources</div>
       <div class="text-body text-[#696969]">The content used in this project is based on readily available sources.</div>

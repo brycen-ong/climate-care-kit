@@ -172,24 +172,24 @@
 </script>
 
 <template>
-  <section class="section bg-[url(/assets/images/cpq/cpq-bg-1.webp)] bg-size-[100%_100%] text-center" :class="{ 'hidden': step > 0 }">
+  <section class="section bg-[url(/assets/images/cpq/cpq-bg-1.webp)] bg-size-[auto_100%] text-center lg:bg-size-[100%_100%]" :class="{ 'hidden': step > 0 }">
     <div class="container">
-      <div class="text-title mb-6">Discover your Climate Personality</div>
-      <div class="text-body mb-16 max-w-214">
+      <div class="text-6xl font-medium mb-6 lg:text-title">Discover your Climate Personality</div>
+      <div class="text-body mb-16 lg:max-w-214">
         How do you react to the world around you, and what role does this play in your health?
         Discover your Climate Personality and learn about how to protect your health from the changing climate.
       </div>
       <button class="button text-button w-70 text-white" @click="step++">Start</button>
     </div>
   </section>
-  <section class="section bg-size-[100%_100%] transition-all" :class="{ 'hidden': step === 0 }" :style="{ backgroundImage: `url(${quiz[step-1]?.background})`}">
+  <section class="section bg-size-[auto_100%] transition-all lg:bg-size-[100%_100%]" :class="{ 'hidden': step === 0 }" :style="{ backgroundImage: `url(${quiz[step-1]?.background})`}">
     <div class="container">
-      <div class="text-label mb-6">Question {{ step }}/9</div>
-      <div class="text-h3 mb-16">{{ quiz[step-1]?.question }}</div>
-      <div class="text-body2 grid grid-cols-2 gap-2 mb-16">
+      <div class="text-label mb-2 lg:mb-6">Question {{ step }}/9</div>
+      <div class="text-h3 mb-8 lg:mb-16">{{ quiz[step-1]?.question }}</div>
+      <div class="text-md grid grid-cols-2 gap-2 mb-16 lg:text-body2">
         <div class="col-span-1 relative" v-for="option in Object.keys(quiz[step-1]?.options || {})">
           <input type="radio" :id="`${step}-${option}`" :value="option" :name="`${step-1}`" class="absolute opacity-0 peer" v-model="answers[step-1]">
-          <label :for="`${step}-${option}`" class="block p-6 rounded-2xl cursor-pointer hover:bg-[#FFF3] peer-checked:ring-1 ring-white/75 peer-checked:bg-[#FFF3]">
+          <label :for="`${step}-${option}`" class="block p-2 rounded-2xl cursor-pointer hover:bg-[#FFF3] peer-checked:ring-1 ring-white/75 peer-checked:bg-[#FFF3] lg:p-6">
             {{ quiz[step-1]?.options?.[option as keyof object] }}
           </label>
         </div>
